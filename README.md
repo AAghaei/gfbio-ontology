@@ -20,22 +20,21 @@ The vocabulary revolves around the following categories:
 * Chemical
 * Method
 * Process
-
 * Topics (e.g. Biology, Medicine)
 
 ## Roles and workflows
 
 * The workflow
-		  - ...
+  - ...
 
 * The roles
-		  - Domain experts: Knowledgeable in the domain captured by the ontology
-		  - Knowledge engineers: Elicit insights from experts to create a conceptual model
-		  - Ontology engineers: Represent the conceptual model in a suitable knowledge representation language
+  - Domain experts: Knowledgeable in the domain captured by the ontology
+  - Knowledge engineers: Elicit insights from experts to create a conceptual model
+  - Ontology engineers: Represent the conceptual model in a suitable knowledge representation language
 
 * The responsibles
-		  - Claas-Thido Pfaff
-		  - ...
+  - Claas-Thido Pfaff
+  - ...
 
 ## How to contribute
 
