@@ -1,4 +1,4 @@
-# gfbioontology
+# gfbio-ontology
 
 This is the repository of the gfbio-ontology. It is an application ontology
 which is describing biological search objects. Thus it can be used for the
@@ -8,9 +8,9 @@ storage for semantic annotations.
 
 ## What does it cover
 
-The core of the ontology covers the description of biological search objects for a clear and
-precose annotation along important topics. It encompasses aspects of the following main
-categories:
+At the core the ontology covers the description of biological search objects.
+If allows for a clear and precise annotation along important topics in biology.
+The vocabulary revolves around the following categories:
 
 * Time
 * Space
@@ -21,6 +21,8 @@ categories:
 * Method
 * Process
 
+* Topics
+
 ## Roles and workflows
 
 * The workflow
@@ -29,6 +31,7 @@ categories:
 
 ## How to contribute
 
-You can contribute to the development of the gfbio ontology by creating yourself a
-GitHub account. If you have comments, recommendation, critiques please feel free
-to add an issue.
+You can contribute to the development of the gfbio ontology by creating
+yourself a GitHub account. If you have comments, recommendation, critique
+please feel free to add an
+[issue](https://github.com/gfbio/gfbio-ontology/issues/new).
