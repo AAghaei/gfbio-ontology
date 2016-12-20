@@ -21,17 +21,25 @@ The vocabulary revolves around the following categories:
 * Method
 * Process
 
-* Topics
+* Topics (e.g. Biology, Medicine)
 
 ## Roles and workflows
 
 * The workflow
+		  - ...
+
 * The roles
+		  - Domain experts: Knowledgeable in the domain captured by the ontology
+		  - Knowledge engineers: Elicit insights from experts to create a conceptual model
+		  - Ontology engineers: Represent the conceptual model in a suitable knowledge representation language
+
 * The responsibles
+		  - Claas-Thido Pfaff
+		  - ...
 
 ## How to contribute
 
-You can contribute to the development of the gfbio ontology by creating
+You can contribute to the development of the gfbio-ontology by creating
 yourself a GitHub account. If you have comments, recommendation, critique
 please feel free to add an
 [issue](https://github.com/gfbio/gfbio-ontology/issues/new).
