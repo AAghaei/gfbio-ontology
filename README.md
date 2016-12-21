@@ -158,11 +158,39 @@ plant parasites but not as symbionts.
 
 * Chemical
 
+The chemical part deals with all aspects of chemistry being part of biologcial
+data. This comprises chemical elements and compounds which have been measured
+as well their function in the biological context. The vocabulary here supports
+the annotation by providing a list of elements based on the periodic table as
+well as a list of chemical compounds and classes of compounds e.g. “Lipids”,
+“Carbohydrates”, “Amino Acids” (c.f. vocabulary: https://git.io/v1OfT) which
+has been compiled from various sources Müller-Esterl 2004; Riedel and Janiak
+2007; Vollhardt, Schore, and Peter 2005) Moreover, the biological functions of
+chemicals which are relevant in ecological studies are covered by conceptual
+keywords like e.g. “Antibody”, “Attractant” or “Repellent” (c.f. vocabulary:
+https://git.io/v1OfY) which has been inspired by the Chemical Entities of
+Biological Interest ontology (CHEBI)
+(http://www.ebi.ac.uk/ols/ontologies/chebi).
+
 * Method
 
+The methodological part deals with the general approach and a form of abstract
+localization of a study. The vocabulary provides a list of generic approach
+types being either “Virtual” (e.g. simulation), “Manipulative” (i.e. with
+experimental factors mostly controlled) or “Observational” (i.e. where plot
+selection creates factor gradients) (https://git.io/v1OfK). The localization of
+the study is captured by categories like “Microcosm” (e.g. lab experiment),
+“Mesocosm” (e.g. ecotron, greenhouse experiment) to “Macrocosm” (e.g. field
+studies) (https://git.io/v1Ofi). On top of that the method part of EASE
+captures the variables that either have been measured or manipulated in a
+study. The vocabulary provides a list of aspects which are measured and
+manipulated frequently containing conceptual keywords like e.g. the “Producer
+diversity”, the “Consumer density” or the “Nutrient availability”
+(https://git.io/v1OfD).
 
 * Topics (e.g. Biology, Medicine)
 
+...
 
 ### The resource
 
