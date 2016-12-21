@@ -60,11 +60,34 @@ the core concepts and relations.
 The time part captures temporal aspects relevant for biology data. That
 includes the start and the end of a data acquisition, geological timeframes as
 well as the temporal resolution and extent of the study. The dates and times in
-EASE are jkQconform to ISO8601 and names of time zones follow the IANA time
-zone database (http://www.iana.org/time-zones). The geological time frames
-refer to those given in the International Chronostratigraphic Chart (ICC) which
-defines and names time ranges in order to express the time scale of earth
-history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
+EASE are conform to the ISO8601 standard and the names of time zones follow the
+IANA time zone database (http://www.iana.org/time-zones). The geological time
+frames refer to those given in the International Chronostratigraphic Chart
+(ICC) which defines and names time ranges in order to express the time scale of
+earth history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
+
+```
+                                            isA          .---------------.
+                                  .--------------------->| GeologicalEon |
+                                  |                      '---------------'
+       isCharacterizedBy          |
+            (1:n)      .----------------------.   isA    .---------------.
+        .------------->| GeologicalTimePeriod |--------->| GeologicalEra |
+        |              '----------------------'          '---------------'
+        |                         |
+ .-------------.                  |          isA         .---------------.
+ |             |                  '--------------------->| ooo           |
+ | TimeContext |                                         '---------------'
+ |             |
+ '-------------'
+        |              .----------------------.
+        '------------->| TimeZone             |
+                       '----------------------'
+       isCharacterizedBy
+            (1:n)
+
+```
+
 
 * Space
 
