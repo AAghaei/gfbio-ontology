@@ -194,13 +194,28 @@ diversity”, the “Consumer density” or the “Nutrient availability”
 
 ### The resource
 
+The resource part is dealing with aspects of the resource which is described.
+This comprises the data format as well as with the acces to the data.
+
 ### The reference
 
+The reference part is dealing with information as further reference to the data
+which is described. That comprises for example a title, a user and their roles
+(e.g. owner, curator).
 
 ## Roles and workflows
 
 * The workflow
   - ...
+
+
+```
+.-----------.
+|           |
+| Edit me!  |
+|           |
+'-----------'
+```
 
 * The roles
   - Domain experts: Knowledgeable in the domain captured by the ontology
@@ -213,7 +228,39 @@ diversity”, the “Consumer density” or the “Nutrient availability”
 
 ## How to contribute
 
+### In general
+
 You can contribute to the development of the gfbio-ontology by creating
-yourself a GitHub account. If you have comments, recommendation, critique
-please feel free to add an
-[issue](https://github.com/gfbio/gfbio-ontology/issues/new).
+yourself a GitHub account. You can read into the current
+[issues](https://github.com/gfbio/gfbio-ontology/issues) to get you started
+with existing topics. However you can also create a [new
+issue](https://github.com/gfbio/gfbio-ontology/issues/new) to discuss your
+ideas or just to give us feedback if something is missing or needs improvement.
+The issues are then referenced in the commit messages to track the changes and
+the progress so always stay up to date with the development around certain
+discussions.
+
+### Technically
+
+Committing to the repository works as follows.
+
+1. Fork the repository
+2. Pull the forked repository to your computer
+3. Make your changes to the files
+4. Commit your changes
+5. Push your changes
+4. Send a pull request
+
+NOTE:
+
+Be as precise as possible in your commit messages. Please always use present
+tense. Give the commit a meaningful title (max 50 chars long). After the title
+leave an empty line and then describe your changes. Be as verbose as you want
+in your descriptions. Bullet points can be helpful to document your changes
+(use asterisk as bullet points '*' in the commit message). Provide references
+to existing issues the commit is addressing. This is done using the hastag and
+the ID of the commit (#id_of_the_issue).
+
+### License
+
+Copyright (c) [2016] [The GFBio project](http://www.gfbio.org/)
