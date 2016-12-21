@@ -18,38 +18,38 @@ the core concepts and relations.
 
 ```
 
-                                         isCharacterizedBy
-                                                         .----------.
-                                          .------------> |   Time   |
-                                          |              '----------'
-.-----------.                             |              .----------.
-|           |                             .------------> |   Space  |
-| Reference |                             |              '----------'
-|           |                             |              .----------.
-'-----------'                             .------------> |  Sphere  |
-      ^                                   |              '----------'
-      |                                   |              .----------.
-      |  isCharacterizedBy                .------------> |   Biome  |
-      |        (1:n)                      |              '----------'
-      |                                   |
+                                                isA
+                                                        .----------------.
+                                          .------------ | TimeContext    |
+                                          |             '----------------'
+.-----------.                             |             .----------------.
+|           |                             .------------ | SpaceContext   |
+| Reference |                             |             '----------------'
+|           |                             |             .----------------.
+'-----------'                             .------------ | SphereContext  |
+      ^                                   |             '----------------'
+      |                                   |             .----------------.
+      |  isCharacterizedBy                .------------ | BiomeContext   |
+      |        (1:n)                      |             '----------------'
+      |                                   v
 .-----------.                       .-----------.
 |           |   isCharacterizedBy   |           |
 |  Object   |---------------------->|  Context  |
 |           |         (1:n)         |           |
 '-----------'                       '-----------'
       ^                                   |
-      |                                   |              .----------.
-      |  isA                              '------------> | Organism |
-      | (1:1)                             |              '----------'
-      |                                   |              .----------.
-.-----------.                             '------------> | Process  |
-|           |                             |              '----------'
-| Resource  |                             |              .----------.
-|           |                             '------------> | Chemical |
-'-----------'                             |              '----------'
-                                          |              .----------.
-                                          '------------> |  Method  |
-                                                         '----------'
+      |                                   |             .-----------------.
+      |  isA                              '------------ | OrganismContext |
+      | (1:1)                             |             '-----------------'
+      |                                   |             .-----------------.
+.-----------.                             '------------ | ProcessContext  |
+|           |                             |             '-----------------'
+| Resource  |                             |             .-----------------.
+|           |                             '------------ | ChemicalContext |
+'-----------'                             |             '-----------------'
+                                          |             .-----------------.
+                                          '------------ |  MethodContext  |
+                                                         '----------------'
 
 ```
 
@@ -221,17 +221,9 @@ which is described. That comprises for example a title, a user and their roles
 '-----------'
 ```
 
-* Access roles
-  - moderator
-  - reviewer
-  - user
-  - consumer
-
 * The responsibles and roles
   - Claas-Thido Pfaff
   - ...
-
-
 
 ## How to contribute
 
@@ -246,6 +238,13 @@ ideas or just to give us feedback if something is missing or needs improvement.
 The issues are then referenced in the commit messages to track the changes and
 the progress so always stay up to date with the development around certain
 discussions.
+
+### Based on role
+
+* Roles
+  - moderator
+  - reviewer
+  - user
 
 ### Technically
 
