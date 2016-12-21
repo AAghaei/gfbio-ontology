@@ -205,9 +205,13 @@ which is described. That comprises for example a title, a user and their roles
 
 ## Roles and workflows
 
-* The workflow
+* Ontology creation workflow
   - ...
 
+*  Ontology creation roles
+  - Domain experts: Knowledgeable in the domain captured by the ontology
+  - Knowledge engineers: Elicit insights from experts to create a conceptual model
+  - Ontology engineers: Represent the conceptual model in a suitable knowledge representation language
 
 ```
 .-----------.
@@ -217,14 +221,17 @@ which is described. That comprises for example a title, a user and their roles
 '-----------'
 ```
 
-* The roles
-  - Domain experts: Knowledgeable in the domain captured by the ontology
-  - Knowledge engineers: Elicit insights from experts to create a conceptual model
-  - Ontology engineers: Represent the conceptual model in a suitable knowledge representation language
+* Access roles
+  - moderator
+  - reviewer
+  - user
+  - consumer
 
-* The responsibles
+* The responsibles and roles
   - Claas-Thido Pfaff
   - ...
+
+
 
 ## How to contribute
 
