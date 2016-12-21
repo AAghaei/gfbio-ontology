@@ -10,7 +10,49 @@ storage for semantic annotations.
 
 At the core the ontology covers the description of biological search objects.
 If allows for a clear and precise annotation along important topics in biology.
-The vocabulary revolves around the following categories:
+The vocabulary revolves around several topics or categories: A diagram  shows
+the core concepts and relations.
+
+
+```
+
+                                                  isCharacterizedBy
+                                                                  .----------.
+                                                   .------------> |   Time   |
+                                                   |              '----------'
+                                                   |              .----------.
+                                                   .------------> |   Space  |
+                                                   |              '----------'
+                                                   |              .----------.
+                                                   .------------> |  Sphere  |
+                                                   |              '----------'
+                                                   |              .----------.
+                                                   .------------> |   Biome  |
+                                                   |              '----------'
+                                                   |
+         .-----------.                       .-----------.
+         |           |   isCharacterizedBy   |           |
+         |  Object   | <---------------------|  Context  |
+         |           |         (1:n)         |           |
+         '-----------'                       '-----------'
+                                                   |
+                                                   |              .----------.
+                                                   '------------> | Organism |
+                                                   |              '----------'
+                                                   |              .----------.
+                                                   '------------> | Process  |
+                                                   |              '----------'
+                                                   |              .----------.
+                                                   '------------> | Chemical |
+                                                   |              '----------'
+                                                   |              .----------.
+                                                   '------------> |  Method  |
+                                                                  '----------'
+
+
+```
+
+Here the categories can be detailed.
 
 * Time
 * Space
@@ -21,6 +63,7 @@ The vocabulary revolves around the following categories:
 * Method
 * Process
 * Topics (e.g. Biology, Medicine)
+
 
 ## Roles and workflows
 
