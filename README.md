@@ -13,6 +13,8 @@ If allows for a clear and precise annotation along essential topics in biology.
 The vocabulary revolves around several topics or categories: A diagram  shows
 the core concepts and relations.
 
+### Core concepts diagram
+
 
 ```
 
@@ -51,7 +53,7 @@ the core concepts and relations.
 
 ```
 
-Details about the categories:
+### The contexts
 
 * Time
 
@@ -90,12 +92,81 @@ localized study plots were established within which the measurements have been
 taken.
 
 * Sphere
+
+The sphere part comprises aspects of the pedosphere, the hydrosphere, the
+atmosphere and the lithosphere and therefore complements the spatial
+information of the EASE framework. It allows to specify distinct layers within
+the atmosphere (e.g. Troposphere, c.f. vocabulary https://git.io/v1OUU) or a
+layer within a body of water (e.g. Abyssopelagic, c.f. vocabulary
+https://git.io/v1OUI) to state where the data has been gathered. Apart from
+this, the sphere facet also captures the levels of biological organization. For
+that purpose the vocabulary provides predefined categories ranging from the
+“Atom” over “Cell” and “Organ” up to the “Biosphere” (c.f. vocabulary
+https://git.io/v1Of7). This finer level of granularity in allows in the end for
+the selection of data which focuses on a specific organizational level or which
+comes from a specific compartment in the biosphere like a certain layer in the
+atmosphere or the soil.
+
 * Biome
+
+The biome part of EASE comprises aspects relevant for describing biomes the
+latitudinal (e.g. Boreal, Temperate, Tropic, c.f. vocabulary:
+https://git.io/v1OU4) and altitudinal zonation (e.g. Nivale, Montane, c.f.
+vocabulary: https://git.io/v1OUE), the moisture regime (e.g. Humid, Arid, c.f.
+vocabulary: https://git.io/v1OUi), the continentality (e.g. Continental,
+Maritime, c.f. vocabulary: https://git.io/v1OUX) as well as the physiognomy of
+the biome (e.g. Savannah, Shrubland, c.f. vocabulary: https://git.io/v1OUD)
+(Woodward, Lomas, and Kelly 2004). Below these higher levels of information the
+EASE framework also extends into more specifics which are dealing with oro- and
+pedobiomes. The vocabulary provides conceptual keywords for selection which are
+containing e.g. “Amphibiome”, “Halobiome” or “Helobiome“ (c.f. vocabulary:
+https://git.io/v1OfJ). The biome part also deals with the classification of
+biomes comprising their general condition with “Natural” or “Urban” and their
+dominant usage with e.g. “Agriculture”, “Forestry” or “Fishery” (c.f.
+vocabulary: https://git.io/v1OvN).
+
 * Organism
-* Chemical
-* Method
+
+The organism part of EASE deals with the scientific names and taxonomy of
+organisms. The schema captures scientific names separately for botanical,
+zoological, fungal organisms and for viruses which has been inspired from the
+ABCD standard (https://github.com/tdwg/abcd). For the taxonomy of organisms the
+schema of EASE is containing elements named along the main ranks of the Linnean
+topology which are “Domain”, “Kingdom” (e.g. Plantae, Animalia), “Division”
+(botany) or “Phylum” (zoology), “Class”, “Order”, “Family” and “Genus”.
+
 * Process
+
+The process part deals with aspects that are describing processes. It captures
+the names of the processes and allows a coarse classification. To this end the
+vocabulary supports the annotation by providing a generic list of ecological
+processes which comprises e.g. the “Adaption”, “Speciation” and “Migration”
+(c.f. vocabulary: https://git.io/v1OfZ) and a coarse classification of the
+processes with e.g. “Movement”, “Exchange”, “Increase” or “Decrease” (c.f.
+vocabulary: https://git.io/v1Of4). Additionally, the process part deals with
+interaction processes, where the user is presented with the option to specify
+the interacting partners based on kingdoms (e.g. “Plantae”, “Animalia”), the
+direction of the interaction (“Mutual”, “Affects”, “Is Affected By”) and the
+quality of the interaction (e.g. “Amensalism”, “Antagonism” c.f. vocabulary:
+https://git.io/v1OfE). Not only does this allow to select a particular process
+in the end but also to carry out a search for interaction process related
+datasets in a very generic way. For example, one can select all data that deals
+with the interaction between fungi and plants where the direction from the
+first to the second interaction partner is specified as “Affects” with the
+quality being “Antagonistic”. That would select then data dealing with fungi as
+plant parasites but not as symbionts.
+
+* Chemical
+
+* Method
+
+
 * Topics (e.g. Biology, Medicine)
+
+
+### The resource
+
+### The reference
 
 
 ## Roles and workflows
