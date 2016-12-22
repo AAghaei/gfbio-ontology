@@ -1,17 +1,21 @@
-# gfbio-ontology
+# Intro
 
-This is the repository of the gfbio-ontology. It is an application ontology
-which is describing the essence of biological search objects. As a basis it
-uses the [EASE](https://github.com/cpfaff/ease) annotation schema. The schema
-andd the ontology can be used for the annotation of biological data and for
-significantly improving the discovery for biodiversity research related data.
+This is the repository of the gfbio-ontology. The ontology is an application
+ontology which is describing the essences of a biological search objects. As
+basis of the ontology an xml schema is used which documents typical metadata
+(author, data type, title) as well as semantic annotations.
 
-## What does it cover
+Next to the ontology the repostiroy also contains an xml schema based on the
+[EASE](https://github.com/cpfaff/ease) schema. The schema and the ontology can
+be used in concert for the annotation of biological data and for building
+efficient tools supporting the disvoery of bioligical data.
+
+# The core and coverage of the ontology
 
 At the core the ontology covers the description of biological search objects.
 If allows for a clear and precise annotation along essential topics in biology.
-The vocabulary revolves around several topics or categories: A diagram  shows
-the core concepts and relations.
+The overall vocabulary revolves around several topics or categories which are
+detailed with their relations in the diagram below.
 
 ### Core concepts diagram
 
@@ -53,18 +57,18 @@ the core concepts and relations.
 
 ```
 
-### The contexts
+### Contexts
 
-* Time
+* Time Context
 
-The time part captures temporal aspects relevant for biology data. That
-includes the start and the end of a data acquisition, geological timeframes as
-well as the temporal resolution and extent of the study. The dates and times in
-EASE are conform to the ISO8601 standard and the names of time zones follow the
-IANA time zone database (http://www.iana.org/time-zones). The geological time
-frames refer to those given in the International Chronostratigraphic Chart
-(ICC) which defines and names time ranges in order to express the time scale of
-earth history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
+The time context describes temporal aspects relevant for biological data. The
+schema includes a start and an end date of a data acquisition (conform to
+ISO8601), geological time frames, as well as a temporal resolution and extent.
+The vocabulary covers names of time zones which follow the IANA time zone
+database (see: http://www.iana.org/time-zones), geological time frames based on
+the International Chronostratigraphic Chart (ICC) which defines and names time
+geological time ranges in order to express the time scale of earth history
+(http://www.stratigraphy.org/index.php/ics-chart-timescale).
 
 ```
                                             isA          .---------------.
@@ -89,30 +93,23 @@ earth history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
 ```
 
 
-* Space
+* Space Context
 
-The space part deals with information related to locations. It captures the
-names of locations, the type of locations as the hierarchical relations of a
-location to the corresponding countries and continents. For the location type
-as well as for the countries and the continents EASE provides predefined lists.
-They are containing concepts e.g. “City”, “Stream”, and “Lake” (c.f. vocabulary
-https://git.io/v1sA1) for location types or names of countries and continents
-like “Andorra”, “Afghanistan”, “Africa”, “Asia” and “Europe” (c.f. vocabulary
-https://git.io/v1sAS) which has been incorporated from the GeoNames ontology
-(http://www.geonames.org/). In addition to such explicit definitions of
-locations, the EASE framework allows to specify a bounding box as well as the
-exact study site coordinates. The bounding box provides a coarse localization
-using decimal degree values. The coordinates are captured using the Universal
-Transverse Mercator (UTM) and the World Geodetic System 1984 (WGS84) datum.
-Similar as in the time facet in EASE the space facet provides a resolution and
-an extent. To this end the vocabulary provides predefined categorical values
-being “Point” (<1 m2), “Plot” (1 m2 – 0.01 km2), “Region” (0.01 km2 – 10000
-km2), “Continent” (10000 km2 – 100000000 km2) and “Global” (larger) (c.f.
-vocabulary https://git.io/v1Vtj). This in the end allows to filter for data
-which comes with the desired spatial resolution. For example data that has been
-gathered at the landscape scale (exceeding 10 km²) but within which several
-localized study plots were established within which the measurements have been
-taken.
+The space context deals with information related to locations. The schema
+covers names of locations, the type of locations and the hierarchical relation
+of locations to corresponding countries and continents. The vocabulary provides
+countries and continents “Andorra”, “Afghanistan”, “Africa”, “Asia” and
+“Europe” (c.f. Vocabulary https://git.io/v1sAS, http://www.geonames.org/) as
+well as location types with e.g. “City”, “Stream”, and “Lake” (c.f. Vocabulary
+https://git.io/v1sA1). In addition the schema allows to specify a bounding box
+as well as the exact study site coordinates. The bounding box provides a coarse
+localization using decimal degree values. The coordinates are captured using
+the Universal Transverse Mercator (UTM) and the World Geodetic System 1984
+(WGS84) datum. Similar as in the time facet in EASE the space facet provides a
+resolution and an extent. To this end the vocabulary provides predefined
+categorical values being “Point” (<1 m2), “Plot” (1 m2 – 0.01 km2), “Region”
+(0.01 km2 – 10000 km2), “Continent” (10000 km2 – 100000000 km2) and “Global”
+(larger) (c.f. vocabulary https://git.io/v1Vtj).
 
 * Sphere
 
