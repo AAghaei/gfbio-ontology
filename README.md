@@ -72,22 +72,23 @@ geological time ranges in order to express the time scale of earth history
 
 ```
                                             isA          .---------------.
-                                  .--------------------->| GeologicalEon |
+                                  .----------------------| GeologicalEon |
                                   |                      '---------------'
-       isCharacterizedBy          |
+           isPartOf               v
             (1:n)      .----------------------.   isA    .---------------.
-        .------------->| GeologicalTimePeriod |--------->| GeologicalEra |
+        .--------------| GeologicalTimePeriod |<---------| GeologicalEra |
         |              '----------------------'          '---------------'
-        |                         |
+        v                         ^
  .-------------.                  |          isA         .---------------.
- |             |                  '--------------------->| ooo           |
+ |             |                  '----------------------| ooo           |
  | TimeContext |                                         '---------------'
  |             |
  '-------------'
+        ^
         |              .----------------------.
-        '------------->| TimeZone             |
+        '--------------| TimeZone             |
                        '----------------------'
-       isCharacterizedBy
+           isPartOf
             (1:n)
 
 ```
@@ -113,23 +114,19 @@ categorical values being “Point” (<1 m2), “Plot” (1 m2 – 0.01 km2), �
 
 * Sphere
 
-The sphere part comprises aspects of the pedosphere, the hydrosphere, the
-atmosphere and the lithosphere and therefore complements the spatial
-information of the EASE framework. It allows to specify distinct layers within
-the atmosphere (e.g. Troposphere, c.f. vocabulary https://git.io/v1OUU) or a
-layer within a body of water (e.g. Abyssopelagic, c.f. vocabulary
-https://git.io/v1OUI) to state where the data has been gathered. Apart from
-this, the sphere facet also captures the levels of biological organization. For
-that purpose the vocabulary provides predefined categories ranging from the
-“Atom” over “Cell” and “Organ” up to the “Biosphere” (c.f. vocabulary
-https://git.io/v1Of7). This finer level of granularity in allows in the end for
-the selection of data which focuses on a specific organizational level or which
-comes from a specific compartment in the biosphere like a certain layer in the
-atmosphere or the soil.
+The sphere context comprises aspects of the pedosphere, the hydrosphere, the
+atmosphere and the lithosphere and therefore complements the spatial context.
+The vocabulary provides distinct layers of the atmosphere (e.g. Troposphere,
+c.f. vocabulary https://git.io/v1OUU) or layers within water bodies (e.g.
+Abyssopelagic, c.f. vocabulary https://git.io/v1OUI). Additionally the sphere
+context also covers aspects of the biosphere mainly by the levels of biological
+organization. The vocabulary provides concepts ranging from the “Atom” over
+“Cell” and “Organ” up to the “Biosphere” level (c.f. vocabulary
+https://git.io/v1Of7).
 
 * Biome
 
-The biome part of EASE comprises aspects relevant for describing biomes the
+The biome context comprises aspects relevant for describing biomes the
 latitudinal (e.g. Boreal, Temperate, Tropic, c.f. vocabulary:
 https://git.io/v1OU4) and altitudinal zonation (e.g. Nivale, Montane, c.f.
 vocabulary: https://git.io/v1OUE), the moisture regime (e.g. Humid, Arid, c.f.
