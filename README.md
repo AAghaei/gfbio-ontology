@@ -23,8 +23,8 @@ which are detailed with their relations in the diagram below.
 
 
 ```
-
                                              isPartOf
+                                               (1:n)
                                                         .----------------.
                                           .------------ | TimeContext    |
                                           |             '----------------'
@@ -41,7 +41,7 @@ which are detailed with their relations in the diagram below.
 .-----------.                       .-----------.
 |           |   isCharacterizedBy   |           |
 |  Object   |---------------------->|  Context  |
-|           |         (1:n)         |           |
+|           |         (1:1)         |           |
 '-----------'                       '-----------'
       ^                                   ^
       |                                   |             .-----------------.
