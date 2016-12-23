@@ -24,7 +24,7 @@ which are detailed with their relations in the diagram below.
 
 ```
 
-                                                isA
+                                             isPartOf
                                                         .----------------.
                                           .------------ | TimeContext    |
                                           |             '----------------'
@@ -71,6 +71,7 @@ database (see: http://www.iana.org/time-zones), geological time frames based on
 the International Chronostratigraphic Chart (ICC) which defines and names time
 geological time ranges in order to express the time scale of earth history
 (http://www.stratigraphy.org/index.php/ics-chart-timescale).
+
 
 ```
                                             isA          .---------------.
