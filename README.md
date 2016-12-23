@@ -95,15 +95,6 @@ geological time ranges in order to express the time scale of earth history
 
 ```
 
-Examples:
-
-GeologicalEon
-  - Phanerozoic
-  - Precambrian
-  - Proterozoic
-  - ...
-
-TimeZone
 
 * Space Context
 
