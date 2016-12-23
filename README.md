@@ -1,21 +1,23 @@
 # Intro
 
-This is the repository of the gfbio-ontology. The ontology is an application
-ontology which is describing the essences of a biological search objects. As
-basis of the ontology an xml schema is used which documents typical metadata
-(author, data type, title) as well as semantic annotations.
+This is the gfbio-ontology repository. The ontology which is contained here is
+an application ontology which aims to describe the essences of biological data
+(e.g. audio, video, table) as search objects. As basis of the ontology an xml
+schema is used which documents typical metadata (author, data type, title) as
+well as a set of essential semantic annotations.
 
-Next to the ontology the repostiroy also contains an xml schema based on the
-[EASE](https://github.com/cpfaff/ease) schema. The schema and the ontology can
-be used in concert for the annotation of biological data and for building
-efficient tools supporting the disvoery of bioligical data.
+Next to the ontology the repostiroy contains an xml schema which is based on
+[EASE](https://github.com/cpfaff/ease) (Essential Annotation Schema for
+Ecology). The schema and the ontology can be used together for the annotation
+of biological data and for building tools supporting an efficient disvoery of
+bioligical data (e.g. faceted search).
 
 # The core and coverage of the ontology
 
 At the core the ontology covers the description of biological search objects.
-If allows for a clear and precise annotation along essential topics in biology.
-The overall vocabulary revolves around several topics or categories which are
-detailed with their relations in the diagram below.
+If allows for a clear and precise annotation along essential aspects in
+biology. The overall vocabulary revolves around several topics or categories
+which are detailed with their relations in the diagram below.
 
 ### Core concepts diagram
 
@@ -93,6 +95,15 @@ geological time ranges in order to express the time scale of earth history
 
 ```
 
+Examples:
+
+GeologicalEon
+  - Phanerozoic
+  - Precambrian
+  - Proterozoic
+  - ...
+
+TimeZone
 
 * Space Context
 
