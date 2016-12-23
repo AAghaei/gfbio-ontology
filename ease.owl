@@ -64,7 +64,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#TimeContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The time context allows to capture the quantitative and qualitative temporal
 	 aspects that describe the the search object.
@@ -279,7 +284,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#SpaceContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The space context allows to capture the quantitative and qualitative spatial
 	 aspects that describe the the search object.
@@ -675,7 +685,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#SphereContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The sphere context allows to capture the quantitative and qualitative sphere
 	 related aspects that describe the the search object.
@@ -1351,7 +1366,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#BiomeContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The biome context allows to capture the quantitative and qualitative biome
 	 related aspects that describe the the search object.
@@ -1650,7 +1670,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#OrganismContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The organism context captures the quantitative and qualitative organism related
 	 aspects that describe the the search object.
@@ -2315,7 +2340,12 @@
 
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#ProcessContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The process context captures the quantitative and qualitative process related
 	 aspects that describe the the search object.
@@ -2458,7 +2488,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#ChemicalContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The chemical context allows to capture the quantitative and qualitative
 	 chemical related aspects that describe the the search object.
@@ -2601,7 +2636,12 @@
    </owl:Class>
 
    <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#MethodContext">
-      <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+      <rdfs:subClassOf>
+	 <owl:Restriction>
+	    <owl:onProperty rdf:resource="http://terminologies.gfbio.org/terms/ease#isPartOf"/>
+	    <owl:someValuesFrom rdf:resource="http://terminologies.gfbio.org/terms/ease#Context"/>
+	 </owl:Restriction>
+      </rdfs:subClassOf>
       <rdfs:comment xml:lang="en">
 	 The method context allows to capture the quantitative and qualitative method
 	 related aspects that describe the the search object.
