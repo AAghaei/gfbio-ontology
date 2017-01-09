@@ -1,16 +1,14 @@
 # Intro
 
-This is the gfbio-ontology repository. The ontology which is contained here is
-an application ontology which aims to describe the essences of biological data
-(e.g. audio, video, table) as search objects. As basis of the ontology an xml
-schema is used which documents typical metadata (author, data type, title) as
-well as a set of essential semantic annotations.
-
-Next to the ontology the repostiroy contains an xml schema which is based on
-[EASE](https://github.com/cpfaff/ease) (Essential Annotation Schema for
-Ecology). The schema and the ontology can be used together for the annotation
-of biological data and for building tools supporting an efficient disvoery of
-bioligical data (e.g. faceted search).
+This is the gfbio-ontology repository. The ontology is designed as application
+ontology which describes the essence of biological data. The goal of the
+ontology is to provide the vocabulary for an annotaiton and allow for an
+improved discovery of the data. Next to the ontology this repostiroy also
+contains an xml schema. It is based on on the Essential Annotation Schema for
+Ecology [EASE](https://github.com/cpfaff/ease). The schema serves as a basis
+for the ontology and they can be used together allowing for the efficient
+annotation of biological data and for building tools supporting an efficient
+disvoery of the data (e.g. using a faceted search).
 
 # The core and coverage of the ontology
 
@@ -36,7 +34,7 @@ which are detailed with their relations in the diagram below.
       ^                                   |             '----------------'
       |                                   |             .----------------.
       |  isCharacterizedBy                .------------ | BiomeContext   |
-      |        (1:n)                      |             '----------------'
+      |        (1:1)                      |             '----------------'
       |                                   v
 .-----------.                       .-----------.
 |           |   isCharacterizedBy   |           |
@@ -244,6 +242,24 @@ which is described. That comprises for example a title, a user and their roles
 * The responsibles and roles
   - Claas-Thido Pfaff
   - ...
+
+## Design Agreements
+
+* Concepts stay forever. Deprecation is used to refer concepts in case they are
+  abandoned.
+
+* The ontology will be released in versions. This will be done using the
+  release feature of GibHub. The release version should contain information
+  about what has changed in the realse. The rease will follow a semantic naming
+  [schema](http://semver.org/).
+
+  - Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible API changes,
+MINOR version when you add functionality in a backwards-compatible manner, and
+PATCH version when you make backwards-compatible bug fixes.
+
+
 
 ## How to contribute
 
