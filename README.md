@@ -1,14 +1,14 @@
 # Intro
 
-This is the gfbio-ontology repository. The ontology is designed as application
+This is the GFBio-ontology repository. The ontology is designed as application
 ontology which describes the essence of biological data. The goal of the
-ontology is to provide the vocabulary for an annotaiton and allow for an
-improved discovery of the data. Next to the ontology this repostiroy also
-contains an xml schema. It is based on on the Essential Annotation Schema for
+ontology is to provide the vocabulary for an annotation and allow for an
+improved discovery of the data. Next to the ontology this repository also
+contains an XML schema. It is based on on the Essential Annotation Schema for
 Ecology [EASE](https://github.com/cpfaff/ease). The schema serves as a basis
 for the ontology and they can be used together allowing for the efficient
 annotation of biological data and for building tools supporting an efficient
-disvoery of the data (e.g. using a faceted search).
+discovery of the data (e.g. using a faceted search).
 
 # The core and coverage of the ontology
 
@@ -226,10 +226,10 @@ which is described. That comprises for example a title, a user and their roles
 * Ontology creation workflow
   - ...
 
-*  Ontology creation roles
-  - Domain experts: Knowledgeable in the domain captured by the ontology
-  - Knowledge engineers: Elicit insights from experts to create a conceptual model
-  - Ontology engineers: Represent the conceptual model in a suitable knowledge representation language
+*  Ontology creation workflo roles
+  - Domain experts: Knowledgeable in the domain captured by the ontology (Christian, Ivo, Janine, Melanie, Anton)
+  - Knowledge engineers: Elicit insights from experts to create a conceptual model (Claas-Thido Pfaff)
+  - Ontology engineers Represent the conceptual model in a suitable knowledge representation language (Naouel, David)
 
 ```
 .-----------.
@@ -239,25 +239,22 @@ which is described. That comprises for example a title, a user and their roles
 '-----------'
 ```
 
-* The responsibles and roles
-  - Claas-Thido Pfaff
-  - ...
-
 ## Design
 
 ### General information
 
-* The ontology is an applicatioon ontology. It will be modelled to server
+* The ontology is an application ontology. It will be modelled to serve
   specific purposes which are adapted to the needs of the GFBio software
-  components (see also furhter down: Purposes)
+  components involved in the submission of data, the annotation and semantic
+  search (see also further down: Purposes)
 
 * Concepts stay forever. Deprecation is used to refer concepts in case they are
   abandoned.
 
 * The ontology will be released in versions. This will be done using the
   release feature of GibHub. The release version should contain information
-  about what has changed in the realse. The rease will follow a semantic naming
-  [schema](http://semver.org/).
+  about what has changed in the release. The release will follow a semantic
+  naming [schema](http://semver.org/).
 
   - Given a version number MAJOR.MINOR.PATCH, increment the:
 
@@ -267,7 +264,7 @@ PATCH version when you make backwards-compatible bug fixes.
 
 * Links to existing ontologies will be maintained. New concepts (with own uri)
   will only be created if there is no other ontology already specifying it or
-  if there is another good reason for dublication.
+  if there is another good reason for duplication.
 
 ### Purpose of the ontology
 
