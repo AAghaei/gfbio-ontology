@@ -243,7 +243,9 @@ which is described. That comprises for example a title, a user and their roles
   - Claas-Thido Pfaff
   - ...
 
-## Design Agreements
+## Design
+
+### General information
 
 * Concepts stay forever. Deprecation is used to refer concepts in case they are
   abandoned.
@@ -259,7 +261,9 @@ MAJOR version when you make incompatible API changes,
 MINOR version when you add functionality in a backwards-compatible manner, and
 PATCH version when you make backwards-compatible bug fixes.
 
-
+* Links to existing ontologies will be maintained. New concepts (with own uri)
+  will only be created if there is no other ontology already specifying it or
+  if there is another good reason for dublication.
 
 ## How to contribute
 
