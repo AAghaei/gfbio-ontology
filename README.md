@@ -247,6 +247,10 @@ which is described. That comprises for example a title, a user and their roles
 
 ### General information
 
+* The ontology is an applicatioon ontology. It will be modelled to server
+  specific purposes which are adapted to the needs of the GFBio software
+  components (see also furhter down: Purposes)
+
 * Concepts stay forever. Deprecation is used to refer concepts in case they are
   abandoned.
 
@@ -264,6 +268,20 @@ PATCH version when you make backwards-compatible bug fixes.
 * Links to existing ontologies will be maintained. New concepts (with own uri)
   will only be created if there is no other ontology already specifying it or
   if there is another good reason for dublication.
+
+### Purpose of the ontology
+
+* Annotation
+
+When we talk about annotation we mean creating a set of metadata (data about
+data) which is associated with the actual data which is described. The object
+in life science context can vary largely being e.g. tabular data, image, audio
+video data and much more.
+
+* Improved Search
+
+The ontology will serve anchors which allow to extend full text search queries
+to allow for better search results extending the query with helpful concepts.
 
 ## How to contribute
 
