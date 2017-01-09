@@ -233,21 +233,20 @@ which is described. That comprises for example a title, a user and their roles
 * First step
 
 ```
-
-                              .------------------------.
-                              | Model Concepts         |
-              .-------------->| (Knowledge Engineer)   |----------------------------------------------.
-              |               '------------------------'                                              |
-              |                                                                                       v
- .------------------------.    .------------------------.    .------------------------.    .---------------------.
- | ... (workshop)         |    | Identify TS Input      |    | Prepare Recommendation |    | Carry Out Workshop  |
- |                        |--->| (Ontology Engineer)    |--->| (Ontology Engineer)    |--->| (All together)      |
- '------------------------'    '------------------------'    '------------------------'    '---------------------'
-              |                                                                                       ^
-              |                .------------------------.                                             |
-              |                | Invite Domain Experts  |                                             |
-              '--------------->| (Expert Coordinator)   |---------------------------------------------'
-                               '------------------------'
+                      .------------------------.
+                      | Model Concepts         |
+      .-------------->| (Knowledge Engineer)   |----------------------------------------------.
+      |               '------------------------'                                              |
+      |                                                                                       v
+.------------------------.    .------------------------.    .------------------------.    .---------------------.
+| Decide About Concepts  |    | Identify TS Input      |    | Prepare Recommendation |    | Carry Out Workshop  |
+| (Knowledge Engineer)   |--->| (Ontology Engineer)    |--->| (Ontology Engineer)    |--->| (All together)      |
+'------------------------'    '------------------------'    '------------------------'    '---------------------'
+      |                                                                                       ^
+      |                .------------------------.                                             |
+      |                | Invite Domain Experts  |                                             |
+      '--------------->| (Expert Coordinator)   |---------------------------------------------'
+                       '------------------------'
 ```
 
 * The workshop

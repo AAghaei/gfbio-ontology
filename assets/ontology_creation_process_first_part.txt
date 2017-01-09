@@ -9,8 +9,8 @@
                 |               '------------------------'                                              |
                 |                                                                                       v
    .------------------------.    .------------------------.    .------------------------.    .---------------------.
-   | ... (workshop)         |    | Identify TS Input      |    | Prepare Recommendation |    | Carry Out Workshop  |
-   |                        |--->| (Ontology Engineer)    |--->| (Ontology Engineer)    |--->| (All together)      |
+   | Decide About Concepts  |    | Identify TS Input      |    | Prepare Recommendation |    | Carry Out Workshop  |
+   | (Knowledge Engineer)   |--->| (Ontology Engineer)    |--->| (Ontology Engineer)    |--->| (All together)      |
    '------------------------'    '------------------------'    '------------------------'    '---------------------'
                 |                                                                                       ^
                 |                .------------------------.                                             |
