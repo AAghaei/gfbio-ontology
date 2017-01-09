@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .-------------------------.    .-----------------------------.    .---------------------------------.
+  | Present TS Integration  |    | Discuss Concepts/Atrributes |    | Decide about conncepts/         |
+  | (Knowledge and          |--->| and Relationships (Engineer |--->| Atrributes and Relationships    |
+  | Ontology Engineer)      |    | /Coordinator/Experts)       |    | (Engineer /Coordinator/Experts) |
+  '-------------------------'    '-----------------------------'    '---------------------------------'

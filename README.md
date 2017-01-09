@@ -1,14 +1,10 @@
 # Intro
 
-This is the GFBio-ontology repository. The ontology is designed as application
-ontology which describes the essence of biological data. The goal of the
-ontology is to provide the vocabulary for an annotation and allow for an
-improved discovery of the data. Next to the ontology this repository also
-contains an XML schema. It is based on on the Essential Annotation Schema for
-Ecology [EASE](https://github.com/cpfaff/ease). The schema serves as a basis
-for the ontology and they can be used together allowing for the efficient
-annotation of biological data and for building tools supporting an efficient
-discovery of the data (e.g. using a faceted search).
+This is the repository of the GFBio-ontology. It is an application ontology
+which is aiming to describing the essence of biological data to allow for an
+improved annotation and discovery. The ontology is based on prior work in the
+Essential Annotation Schema for Ecology [EASE](https://github.com/cpfaff/ease).
+The schema serves as a basis for the vocabulary in the ontology.
 
 # The core and coverage of the ontology
 
@@ -226,17 +222,63 @@ which is described. That comprises for example a title, a user and their roles
 * Ontology creation workflow
   - ...
 
-*  Ontology creation workflo roles
-  - Domain experts: Knowledgeable in the domain captured by the ontology (Christian, Ivo, Janine, Melanie, Anton)
-  - Knowledge engineers: Elicit insights from experts to create a conceptual model (Claas-Thido Pfaff)
-  - Ontology engineers Represent the conceptual model in a suitable knowledge representation language (Naouel, David)
+*  Ontology workflow roles
+  - Domain experts: Knowledgeable in the domain captured by the ontology
+    + Christian, Ivo, Janine, Melanie, Anton
+  - Knowledge engineers: Elicit insights from experts to create a conceptual model
+    + Claas-Thido Pfaff
+  - Ontology engineers Represent the conceptual model in a suitable knowledge representation language
+    + Naouel, David
+
+* First step
 
 ```
-.-----------.
-|           |
-| Edit me!  |
-|           |
-'-----------'
+
+                              .------------------------.
+                              | Model Concepts         |
+              .-------------->| (Knowledge Engineer)   |----------------------------------------------.
+              |               '------------------------'                                              |
+              |                                                                                       v
+ .------------------------.    .------------------------.    .------------------------.    .---------------------.
+ | ... (workshop)         |    | Identify TS Input      |    | Prepare Recommendation |    | Carry Out Workshop  |
+ |                        |--->| (Ontology Engineer)    |--->| (Ontology Engineer)    |--->| (All together)      |
+ '------------------------'    '------------------------'    '------------------------'    '---------------------'
+              |                                                                                       ^
+              |                .------------------------.                                             |
+              |                | Invite Domain Experts  |                                             |
+              '--------------->| (Expert Coordinator)   |---------------------------------------------'
+                               '------------------------'
+```
+
+* The workshop
+
+```
+.-------------------------.    .-----------------------------.    .---------------------------------.
+| Present TS Integration  |    | Discuss Concepts/Atrributes |    | Decide about conncepts/         |
+| (Knowledge and          |--->| and Relationships (Engineer |--->| Atrributes and Relationships    |
+| Ontology Engineer)      |    | /Coordinator/Experts)       |    | (Engineer /Coordinator/Experts) |
+'-------------------------'    '-----------------------------'    '---------------------------------'
+```
+
+* After workshop
+
+```
+                  .---------------------.
+                  | Model Concepts      |
+        .-------->| (Ontology Engineer) |
+        |         '---------------------'
+        |
+ .------------.   .----------------------.
+ | Workshop   |   | Document Decision    |
+ |            |-->| (Knowledge Engineer) |
+ |            |   '----------------------'
+ '------------'               |
+                              v
+                  .----------------------.
+                  | Goto First Step      |
+                  |                      |
+                  '----------------------'
+
 ```
 
 ## Design
@@ -284,7 +326,7 @@ to allow for better search results extending the query with helpful concepts.
 
 ### In general
 
-You can contribute to the development of the gfbio-ontology by creating
+You can contribute to the development of the GFBio-ontology by creating
 yourself a GitHub account. You can read into the current
 [issues](https://github.com/gfbio/gfbio-ontology/issues) to get you started
 with existing topics. However you can also create a [new
@@ -324,4 +366,4 @@ the ID of the commit (#id_of_the_issue).
 
 ### License
 
-Copyright (c) [2016] [The GFBio project](http://www.gfbio.org/)
+Copyright (c) [2017] [The GFBio project](http://www.gfbio.org/)
