@@ -143,37 +143,48 @@ Abyssopelagic, c.f. vocabulary https://git.io/v1OUI). The vocabulary provides
 concepts ranging from the “Atom” over “Cell” and “Organ” up to the “Biosphere”
 level (c.f. vocabulary https://git.io/v1Of7).
 
-* Biome
+* Biome Context: The biome context comprises aspects relevant for describing
+  biomes.
 
-The biome context comprises aspects relevant for describing biomes the
-latitudinal (e.g. Boreal, Temperate, Tropic, c.f. vocabulary:
-https://git.io/v1OU4) and altitudinal zonation (e.g. Nivale, Montane, c.f.
+#### Metadata (EASE)
+
+The schema covers aspects like the latitudinal gradient the continentality, oro
+and pedobiomes as well as the physiognomy and the land use.
+
+#### Vocabulary (Ontology)
+
+The vocabulary provides the latitudinal (e.g. Boreal, Temperate, Tropic, c.f.
+vocabulary: https://git.io/v1OU4) and altitudinal  (e.g. Nivale, Montane, c.f.
 vocabulary: https://git.io/v1OUE), the moisture regime (e.g. Humid, Arid, c.f.
 vocabulary: https://git.io/v1OUi), the continentality (e.g. Continental,
 Maritime, c.f. vocabulary: https://git.io/v1OUX) as well as the physiognomy of
 the biome (e.g. Savannah, Shrubland, c.f. vocabulary: https://git.io/v1OUD)
-(Woodward, Lomas, and Kelly 2004). Below these higher levels of information the
-EASE framework also extends into more specifics which are dealing with oro- and
-pedobiomes. The vocabulary provides conceptual keywords for selection which are
-containing e.g. “Amphibiome”, “Halobiome” or “Helobiome“ (c.f. vocabulary:
-https://git.io/v1OfJ). The biome part also deals with the classification of
-biomes comprising their general condition with “Natural” or “Urban” and their
-dominant usage with e.g. “Agriculture”, “Forestry” or “Fishery” (c.f.
-vocabulary: https://git.io/v1OvN).
+(Woodward, Lomas, and Kelly 2004). The vocabulary also provides conceptual
+keywords for pedobiomes like e.g. “Amphibiome”, “Halobiome” or “Helobiome“
+(c.f. vocabulary: https://git.io/v1OfJ) for describing the land use “Natural”
+or “Urban” and their dominant usage with e.g. “Agriculture”, “Forestry” or
+“Fishery” (c.f. vocabulary: https://git.io/v1OvN).
 
-* Organism
+* Organism Context: The organism part of EASE deals with the scientific names
+  and taxonomy of organisms.
 
-The organism part of EASE deals with the scientific names and taxonomy of
-organisms. The schema captures scientific names separately for botanical,
-zoological, fungal organisms and for viruses which has been inspired from the
-ABCD standard (https://github.com/tdwg/abcd). For the taxonomy of organisms the
-schema of EASE is containing elements named along the main ranks of the Linnean
-topology which are “Domain”, “Kingdom” (e.g. Plantae, Animalia), “Division”
-(botany) or “Phylum” (zoology), “Class”, “Order”, “Family” and “Genus”.
+#### Metadata (EASE)
 
-* Process
+The schema captures the taxonomy of organisms separately for botanical,
+zoological, fungal organisms and for viruses (inspired by the ABCD standard
+https://github.com/tdwg/abcd). For the taxonomy of organisms the schema is
+containing elements named along the main ranks of the Linnean topology which
+are “Domain”, “Kingdom” (e.g. Plantae, Animalia), “Division” (botany) or
+“Phylum” (zoology), “Class”, “Order”, “Family” and “Genus”.
 
-The process part deals with aspects that are describing processes. It captures
+#### Vocabulary (Ontology)
+
+Vocabulary is only provided for kingdoms (Plantae, Animalia, ...).
+
+* Process Context: The process part deals with aspects that are describing
+  processes.
+
+It captures
 the names of the processes and allows a coarse classification. To this end the
 vocabulary supports the annotation by providing a generic list of ecological
 processes which comprises e.g. the “Adaption”, “Speciation” and “Migration”
