@@ -3,16 +3,18 @@
 This is the repository which hosts the development of the GFBio-ontology and
 some directly associated standards and tools. The ontology aims to be an
 application ontology which supports GFBio system components with the annotation
-of data and their discovery. The ontology is influenced on prior work from the
-Essential Annotation Schema for Ecology ([EASE](https://github.com/cpfaff/ease)).
+and the discovery of data. The ontology is influenced by prior work from the
+Essential Annotation Schema for Ecology
+([EASE](https://github.com/cpfaff/ease)).
 
 # The core and coverage of the ontology
 
 The ontology evolves around a simple core which covers the description of
 biological search objects. The object is characterized by references (general
-metadata) and context (biological context). While the context part already
-covers many relevant concepts it also allows a structured and flexible
-extension in the future (See also diagramm below).
+metadata like author name, title, abstract) and context (biological context:
+biome, chemicals, processes which have been observed). While the context part
+already covers a host of relevant concepts it allows also for a structured and
+flexible growth with future requirements (See also diagramm below).
 
 ### Core concepts diagram
 
@@ -50,6 +52,11 @@ extension in the future (See also diagramm below).
 '-----------'                             |             '-----------------'
                                           |             .-----------------.
                                           '------------ | MethodContext   |
+                                                        '-----------------'
+---------------------------------------------------------------------------
+
+                                          |             .-----------------.
+                                          '------------ | New Context...  |
                                                         '-----------------'
 
 ```
