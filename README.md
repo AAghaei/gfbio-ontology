@@ -71,13 +71,13 @@ flexible growth with future requirements (See also diagramm below).
 The schema includes a start and an end date of a data acquisition (conform to
 ISO8601), geological time frames, as well as a temporal resolution and extent.
 
-#### Vocabulary
+#### Vocabulary (Ontology)
 
 The vocabulary in the ontology covers names of time zones which follow the IANA
 time zone database (see: http://www.iana.org/time-zones), geological time
-frames based on the International Chronostratigraphic Chart (ICC) which defines
-and names time geological time ranges in order to express the time scale of
-earth history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
+frames based on the International Chronostratigraphic Chart (ICC) defining
+geological time ranges in order to express the time scale of earth history
+(http://www.stratigraphy.org/index.php/ics-chart-timescale).
 
 ```
                                             isA          .---------------.
@@ -103,35 +103,45 @@ earth history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
 ```
 
 
-* Space Context
+* Space Context: The space context deals with information related to locations.
 
-The space context deals with information related to locations. The schema
-covers names of locations, the type of locations and the hierarchical relation
-of locations to corresponding countries and continents. The vocabulary provides
-countries and continents “Andorra”, “Afghanistan”, “Africa”, “Asia” and
-“Europe” (c.f. Vocabulary https://git.io/v1sAS, http://www.geonames.org/) as
-well as location types with e.g. “City”, “Stream”, and “Lake” (c.f. Vocabulary
-https://git.io/v1sA1). In addition the schema allows to specify a bounding box
-as well as the exact study site coordinates. The bounding box provides a coarse
-localization using decimal degree values. The coordinates are captured using
-the Universal Transverse Mercator (UTM) and the World Geodetic System 1984
-(WGS84) datum. Similar as in the time facet in EASE the space facet provides a
-resolution and an extent. To this end the vocabulary provides predefined
-categorical values being “Point” (<1 m2), “Plot” (1 m2 – 0.01 km2), “Region”
-(0.01 km2 – 10000 km2), “Continent” (10000 km2 – 100000000 km2) and “Global”
-(larger) (c.f. vocabulary https://git.io/v1Vtj).
+#### Metadata (EASE)
 
-* Sphere
+The schema covers names of locations, the type of locations and the
+hierarchical relation of locations to corresponding countries and continents.
+In addition the schema allows to specify a bounding box as well as the exact
+study site coordinates. The bounding box provides a coarse localization using
+decimal degree values. The coordinates are captured using the Universal
+Transverse Mercator (UTM) and the World Geodetic System 1984 (WGS84) datum.
+Similar as in the time part in the space part provides a resolution and an
+extent.
 
-The sphere context comprises aspects of the pedosphere, the hydrosphere, the
-atmosphere and the lithosphere and therefore complements the spatial context.
+### Vocabulary (Ontology)
+
+The vocabulary provides countries and continents “Andorra”, “Afghanistan”,
+“Africa”, “Asia” and “Europe” (c.f. Vocabulary https://git.io/v1sAS,
+http://www.geonames.org/) as well as types of locations with e.g. “City”,
+“Stream”, and “Lake” (c.f. Vocabulary https://git.io/v1sA1). The vocabulary
+also provides predefined spatial categorical values being “Point” (<1 m2),
+“Plot” (1 m2 – 0.01 km2), “Region” (0.01 km2 – 10000 km2), “Continent” (10000
+km2 – 100000000 km2) and “Global” (larger) (c.f. vocabulary
+https://git.io/v1Vtj).
+
+* Sphere Context: The sphere context comprises aspects related to earth
+  spheres.
+
+#### Metadata (EASE)
+
+The schema covers layers of the atmosphere, the pedosphere and hydrosphere
+(rivers, lakes, sea) and aspects of the biosphere.
+
+#### Vocabulary (Ontology)
+
 The vocabulary provides distinct layers of the atmosphere (e.g. Troposphere,
 c.f. vocabulary https://git.io/v1OUU) or layers within water bodies (e.g.
-Abyssopelagic, c.f. vocabulary https://git.io/v1OUI). Additionally the sphere
-context also covers aspects of the biosphere mainly by the levels of biological
-organization. The vocabulary provides concepts ranging from the “Atom” over
-“Cell” and “Organ” up to the “Biosphere” level (c.f. vocabulary
-https://git.io/v1Of7).
+Abyssopelagic, c.f. vocabulary https://git.io/v1OUI). The vocabulary provides
+concepts ranging from the “Atom” over “Cell” and “Organ” up to the “Biosphere”
+level (c.f. vocabulary https://git.io/v1Of7).
 
 * Biome
 
