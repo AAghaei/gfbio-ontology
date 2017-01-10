@@ -1,17 +1,18 @@
 # Intro
 
-This is the repository of the GFBio-ontology. It is an application ontology
-which is aiming to describing the essence of biological data to allow for an
-improved annotation and discovery. The ontology is based on prior work in the
-Essential Annotation Schema for Ecology [EASE](https://github.com/cpfaff/ease).
-The schema serves as a basis for the vocabulary in the ontology.
+This is the repository which hosts the development of the GFBio-ontology and
+some directly associated standards and tools. The ontology aims to be an
+application ontology which supports GFBio system components with the annotation
+of data and their discovery. The ontology is influenced on prior work from the
+Essential Annotation Schema for Ecology ([EASE](https://github.com/cpfaff/ease)).
 
 # The core and coverage of the ontology
 
-At the core the ontology covers the description of biological search objects.
-If allows for a clear and precise annotation along essential aspects in
-biology. The overall vocabulary revolves around several topics or categories
-which are detailed with their relations in the diagram below.
+The ontology evolves around a simple core which covers the description of
+biological search objects. The object is characterized by references (general
+metadata) and context (biological context). While the context part already
+covers many relevant concepts it also allows a structured and flexible
+extension in the future (See also diagramm below).
 
 ### Core concepts diagram
 
@@ -55,17 +56,21 @@ which are detailed with their relations in the diagram below.
 
 ### Contexts
 
-* Time Context
+* Time Context: The time context describes temporal aspects relevant for
+  biological data.
 
-The time context describes temporal aspects relevant for biological data. The
-schema includes a start and an end date of a data acquisition (conform to
+#### Metadata (EASE)
+
+The schema includes a start and an end date of a data acquisition (conform to
 ISO8601), geological time frames, as well as a temporal resolution and extent.
-The vocabulary covers names of time zones which follow the IANA time zone
-database (see: http://www.iana.org/time-zones), geological time frames based on
-the International Chronostratigraphic Chart (ICC) which defines and names time
-geological time ranges in order to express the time scale of earth history
-(http://www.stratigraphy.org/index.php/ics-chart-timescale).
 
+#### Vocabulary
+
+The vocabulary in the ontology covers names of time zones which follow the IANA
+time zone database (see: http://www.iana.org/time-zones), geological time
+frames based on the International Chronostratigraphic Chart (ICC) which defines
+and names time geological time ranges in order to express the time scale of
+earth history (http://www.stratigraphy.org/index.php/ics-chart-timescale).
 
 ```
                                             isA          .---------------.
