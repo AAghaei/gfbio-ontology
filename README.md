@@ -104,9 +104,11 @@ geological time ranges in order to express the time scale of earth history
 ```
 
 
-* Space Context: The space context deals with information related to locations.
+#### Space Context
 
-#### Metadata (EASE)
+The space context deals with information related to locations.
+
+* Metadata (EASE)
 
 The schema covers names of locations, the type of locations and the
 hierarchical relation of locations to corresponding countries and continents.
@@ -117,7 +119,7 @@ Transverse Mercator (UTM) and the World Geodetic System 1984 (WGS84) datum.
 Similar as in the time part in the space part provides a resolution and an
 extent.
 
-### Vocabulary (Ontology)
+* Vocabulary (Ontology)
 
 The vocabulary provides countries and continents “Andorra”, “Afghanistan”,
 “Africa”, “Asia” and “Europe” (c.f. Vocabulary https://git.io/v1sAS,
@@ -128,15 +130,16 @@ also provides predefined spatial categorical values being “Point” (<1 m2),
 km2 – 100000000 km2) and “Global” (larger) (c.f. vocabulary
 https://git.io/v1Vtj).
 
-* Sphere Context: The sphere context comprises aspects related to earth
-  spheres.
+#### Sphere Context
 
-#### Metadata (EASE)
+The sphere context comprises aspects related to earth spheres.
+
+* Metadata (EASE)
 
 The schema covers layers of the atmosphere, the pedosphere and hydrosphere
 (rivers, lakes, sea) and aspects of the biosphere.
 
-#### Vocabulary (Ontology)
+* Vocabulary (Ontology)
 
 The vocabulary provides distinct layers of the atmosphere (e.g. Troposphere,
 c.f. vocabulary https://git.io/v1OUU) or layers within water bodies (e.g.
@@ -144,15 +147,16 @@ Abyssopelagic, c.f. vocabulary https://git.io/v1OUI). The vocabulary provides
 concepts ranging from the “Atom” over “Cell” and “Organ” up to the “Biosphere”
 level (c.f. vocabulary https://git.io/v1Of7).
 
-* Biome Context: The biome context comprises aspects relevant for describing
-  biomes.
+#### Biome Context
 
-#### Metadata (EASE)
+The biome context comprises aspects relevant for describing biomes.
+
+* Metadata (EASE)
 
 The schema covers aspects like the latitudinal gradient the continentality, oro
 and pedobiomes as well as the physiognomy and the land use.
 
-#### Vocabulary (Ontology)
+* Vocabulary (Ontology)
 
 The vocabulary provides the latitudinal (e.g. Boreal, Temperate, Tropic, c.f.
 vocabulary: https://git.io/v1OU4) and altitudinal  (e.g. Nivale, Montane, c.f.
@@ -166,10 +170,12 @@ keywords for pedobiomes like e.g. “Amphibiome”, “Halobiome” or “Helobi
 or “Urban” and their dominant usage with e.g. “Agriculture”, “Forestry” or
 “Fishery” (c.f. vocabulary: https://git.io/v1OvN).
 
-* Organism Context: The organism part of EASE deals with the scientific names
-  and taxonomy of organisms.
+#### Organism Context
 
-#### Metadata (EASE)
+The organism part of EASE deals with the scientific names and taxonomy of
+organisms.
+
+* Metadata (EASE)
 
 The schema captures the taxonomy of organisms separately for botanical,
 zoological, fungal organisms and for viruses (inspired by the ABCD standard
@@ -178,31 +184,36 @@ containing elements named along the main ranks of the Linnean topology which
 are “Domain”, “Kingdom” (e.g. Plantae, Animalia), “Division” (botany) or
 “Phylum” (zoology), “Class”, “Order”, “Family” and “Genus”.
 
-#### Vocabulary (Ontology)
+* Vocabulary (Ontology)
 
 Vocabulary is only provided for kingdoms (Plantae, Animalia, ...).
 
-* Process Context: The process part deals with aspects that are describing
-  processes.
+#### Process Context
 
-It captures
-the names of the processes and allows a coarse classification. To this end the
-vocabulary supports the annotation by providing a generic list of ecological
-processes which comprises e.g. the “Adaption”, “Speciation” and “Migration”
-(c.f. vocabulary: https://git.io/v1OfZ) and a coarse classification of the
-processes with e.g. “Movement”, “Exchange”, “Increase” or “Decrease” (c.f.
-vocabulary: https://git.io/v1Of4). Additionally, the process part deals with
-interaction processes, where the user is presented with the option to specify
-the interacting partners based on kingdoms (e.g. “Plantae”, “Animalia”), the
-direction of the interaction (“Mutual”, “Affects”, “Is Affected By”) and the
-quality of the interaction (e.g. “Amensalism”, “Antagonism” c.f. vocabulary:
-https://git.io/v1OfE). Not only does this allow to select a particular process
-in the end but also to carry out a search for interaction process related
-datasets in a very generic way. For example, one can select all data that deals
-with the interaction between fungi and plants where the direction from the
-first to the second interaction partner is specified as “Affects” with the
-quality being “Antagonistic”. That would select then data dealing with fungi as
-plant parasites but not as symbionts.
+The process part deals with aspects of biological processes.
+
+* Metadata (EASe)
+
+The schema captures the names of the processes and allows their classification.
+
+To this end the vocabulary supports the annotation by providing a generic list
+of ecological processes which comprises e.g. the “Adaption”, “Speciation” and
+“Migration” (c.f. vocabulary: https://git.io/v1OfZ) and a coarse classification
+of the processes with e.g. “Movement”, “Exchange”, “Increase” or “Decrease”
+(c.f. vocabulary: https://git.io/v1Of4).
+
+Additionally, the process part deals with interaction processes, where the user
+is presented with the option to specify the interacting partners based on
+kingdoms (e.g. “Plantae”, “Animalia”), the direction of the interaction
+(“Mutual”, “Affects”, “Is Affected By”) and the quality of the interaction
+(e.g. “Amensalism”, “Antagonism” c.f. vocabulary: https://git.io/v1OfE). Not
+only does this allow to select a particular process in the end but also to
+carry out a search for interaction process related datasets in a very generic
+way. For example, one can select all data that deals with the interaction
+between fungi and plants where the direction from the first to the second
+interaction partner is specified as “Affects” with the quality being
+“Antagonistic”. That would select then data dealing with fungi as plant
+parasites but not as symbionts.
 
 * Chemical
 
