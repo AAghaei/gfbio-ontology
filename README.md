@@ -63,15 +63,16 @@ flexible growth with future requirements (See also diagramm below).
 
 ### Contexts
 
-* Time Context: The time context describes temporal aspects relevant for
-  biological data.
+#### Time Context
 
-#### Metadata (EASE)
+The time context describes temporal aspects relevant for biological data.
+
+* Metadata (EASE)
 
 The schema includes a start and an end date of a data acquisition (conform to
 ISO8601), geological time frames, as well as a temporal resolution and extent.
 
-#### Vocabulary (Ontology)
+* Vocabulary (Ontology)
 
 The vocabulary in the ontology covers names of time zones which follow the IANA
 time zone database (see: http://www.iana.org/time-zones), geological time
