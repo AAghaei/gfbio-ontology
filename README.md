@@ -297,9 +297,9 @@ which is described. That comprises for example a title, a user and their roles
 
 * Releases will be named follow a semantic naming [schema](http://semver.org/).
 
-  - Given a version number MAJOR.MINOR.PATCH, increment the: *MAJOR* version when
-    you make incompatible API changes, *MINOR* version when you add functionality
-    in a backwards-compatible manner, and *PATCH* version when you make
+  - Given a version number MAJOR.MINOR.PATCH, increment the: **MAJOR** version when
+    you make incompatible API changes, **MINOR** version when you add functionality
+    in a backwards-compatible manner, and **PATCH** version when you make
     backwards-compatible bug fixes.
 
 * The ontology aims to maximise the reuse of concepts which exist in other
