@@ -11873,7 +11873,7 @@
       <rdfs:label xml:lang="en">Hadal</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#O Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#oHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 This layer generally forms above the mineral soil or occurs in an
@@ -11891,7 +11891,7 @@
       <rdfs:label xml:lang="en">O Horizon</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#A Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#aHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 The A horizon is the topmost mineral horizon, often referred to as
@@ -11912,7 +11912,7 @@
       <rdfs:label xml:lang="en">A Horizon</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#E Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#eHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 "E", being short for eluviated, is most commonly used to label a
@@ -11934,7 +11934,7 @@
       <rdfs:label xml:lang="en">E Horizon</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#B Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#bHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 B horizons form below an O, A, or E horizon and they have undergone
@@ -11957,7 +11957,7 @@
       <rdfs:label xml:lang="en">B Horizon</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#C Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#cHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 The C horizon (parent material) is below the B Horizon. This layer
@@ -11983,7 +11983,7 @@
       <rdfs:label xml:lang="en">C Horizon</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#R Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#rHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 R horizons are the layers of partially weathered bedrock at the
@@ -11995,7 +11995,7 @@
       <rdfs:label xml:lang="en">R Horizon</rdfs:label>
    </owl:Class>
 
-   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#L Horizon">
+   <owl:Class rdf:about="http://terminologies.gfbio.org/terms/ease#lHorizon">
       <rdfs:subClassOf rdf:resource="http://terminologies.gfbio.org/terms/ease#soilHorizon"/>
       <rdfs:comment xml:lang="en">
 	 L (limnic) horizons or layers indicate mineral or organic material
