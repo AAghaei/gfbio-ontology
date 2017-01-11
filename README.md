@@ -1,22 +1,35 @@
 # Intro
 
-This is the repository which hosts the development of the GFBio-ontology and
-some directly associated standards and tools. The ontology aims to be an
-application ontology which supports GFBio system components with the annotation
-and the discovery of data. The ontology is influenced by prior work from the
-Essential Annotation Schema for Ecology
-([EASE](https://github.com/cpfaff/ease)).
+This is the repository which hosts the GFBio-ontology and some directly
+associated standards and tools. The ontology aims for an application ontology
+which supports the GFBio system components in the annotation and the discovery
+of biological data. The ontology is influenced by prior work from the Essential
+Annotation Schema for Ecology ([EASE](https://github.com/cpfaff/ease)) which is
+also contained as copy in this repository.
 
-# The core and coverage of the ontology
+## Purpose of the ontology
 
-The ontology evolves around a simple core which covers the description of
+* Annotation
+
+When we talk about annotation we mean creating a set of metadata (data about
+data) associated with the actual data which is described. The data described in
+life science can vary largely being e.g. tabular data, image, audio video data
+and much more.
+
+* Discovery
+
+The ontology aims to provide anchors which allow to extend full text search
+queries for better search results extending the query with helpful concepts.
+
+## The core of the ontology
+
+The ontology develops around a simple core which covers the description of
 biological search objects. The object is characterized by references (general
-metadata like author name, title, abstract) and context (biological context:
-biome, chemicals, processes which have been observed). While the context part
-already covers a host of relevant concepts it allows also for a structured and
-flexible growth with future requirements (See also diagramm below).
-
-### Core concepts diagram
+metadata like author name, title, abstract) which you would typically find in a
+metadata schema and the biological context: biome, chemicals, processes which
+have been observed etc. While context part already covers a host concepts
+relevant for biology it also allows for a structured and flexible growth with
+future requirements (See also diagramm below).
 
 
 ```
@@ -61,7 +74,7 @@ flexible growth with future requirements (See also diagramm below).
 
 ```
 
-### Contexts
+### The Contexts
 
 #### Time Context
 
@@ -263,22 +276,60 @@ This comprises the data format as well as with the acces to the data.
 
 The reference part is dealing with information as further reference to the data
 which is described. That comprises for example a title, a user and their roles
-(e.g. owner, curator).
+(e.g. owner, curator) and the general topic of a study.
 
-## Roles and workflows
+## Development
 
-* Ontology creation workflow
-  - ...
+### General design
 
-*  Ontology workflow roles
-  - Domain experts: Knowledgeable in the domain captured by the ontology
-    + Christian, Ivo, Janine, Melanie, Anton
-  - Knowledge engineers: Elicit insights from experts to create a conceptual model
-    + Claas-Thido Pfaff
-  - Ontology engineers Represent the conceptual model in a suitable knowledge representation language
-    + Naouel, David
+* The ontology is an application ontology. It will model relevant aspects to
+  serve specific purposes adapted to the needs of the GFBio software
+  components. Mainly it will support the submission of data, the annotation and
+  semantic search.
 
-* First step
+* Deprecation of concepts is handeled by referencing concepts as deprecated.
+  That means that concepts in the ontology stay forever even if they are
+  abandoned.
+
+* The ontology will be released in versions using the release feature of
+  GibHub. The release should contain an abstract of information about what has
+  changed.
+
+* Releases will be named follow a semantic naming [schema](http://semver.org/).
+
+  - Given a version number MAJOR.MINOR.PATCH, increment the: *MAJOR* version when
+    you make incompatible API changes, *MINOR* version when you add functionality
+    in a backwards-compatible manner, and *PATCH* version when you make
+    backwards-compatible bug fixes.
+
+* The ontology aims to maximise the reuse of concepts which exist in other
+  ontologies. Own concepts will only be created if there is no other ontology
+  already specifying it or if there is another good reason for duplication.
+
+### Development workflow
+
+The development is split into several phases and across different roles. The
+roles are.
+
+* Domain experts: Knowledgeable in the domain captured by the ontology
+
+  - Christian
+  - Ivo
+  - Melanie
+  - Anton
+
+* Knowledge engineers: Elicit insights from experts to create a conceptual
+  model
+
+  - Claas
+
+* Ontology engineers: Represent the conceptual model in a suitable knowledge
+  representation language
+
+    * Naouel
+    * David
+
+* Workflow: First Phase
 
 ```
                       .------------------------.
@@ -297,7 +348,7 @@ which is described. That comprises for example a title, a user and their roles
                        '------------------------'
 ```
 
-* The workshop
+* Workflow: Second Phase
 
 ```
 .-------------------------.    .-----------------------------.    .---------------------------------.
@@ -307,7 +358,7 @@ which is described. That comprises for example a title, a user and their roles
 '-------------------------'    '-----------------------------'    '---------------------------------'
 ```
 
-* After workshop
+* Workflow: Third Phase
 
 ```
                   .---------------------.
@@ -328,69 +379,21 @@ which is described. That comprises for example a title, a user and their roles
 
 ```
 
-## Design
+### How to contribute
 
-### General information
-
-* The ontology is an application ontology. It will be modelled to serve
-  specific purposes which are adapted to the needs of the GFBio software
-  components involved in the submission of data, the annotation and semantic
-  search (see also further down: Purposes)
-
-* Concepts stay forever. Deprecation is used to refer concepts in case they are
-  abandoned.
-
-* The ontology will be released in versions. This will be done using the
-  release feature of GibHub. The release version should contain information
-  about what has changed in the release. The release will follow a semantic
-  naming [schema](http://semver.org/).
-
-  - Given a version number MAJOR.MINOR.PATCH, increment the:
-
-MAJOR version when you make incompatible API changes,
-MINOR version when you add functionality in a backwards-compatible manner, and
-PATCH version when you make backwards-compatible bug fixes.
-
-* Links to existing ontologies will be maintained. New concepts (with own uri)
-  will only be created if there is no other ontology already specifying it or
-  if there is another good reason for duplication.
-
-### Purpose of the ontology
-
-* Annotation
-
-When we talk about annotation we mean creating a set of metadata (data about
-data) which is associated with the actual data which is described. The object
-in life science context can vary largely being e.g. tabular data, image, audio
-video data and much more.
-
-* Improved Search
-
-The ontology will serve anchors which allow to extend full text search queries
-to allow for better search results extending the query with helpful concepts.
-
-## How to contribute
-
-### In general
+#### In general
 
 You can contribute to the development of the GFBio-ontology by creating
-yourself a GitHub account. You can read into the current
-[issues](https://github.com/gfbio/gfbio-ontology/issues) to get you started
-with existing topics. However you can also create a [new
+yourself a GitHub account first. You can read into the
+[issues](https://github.com/gfbio/gfbio-ontology/issues) to get started with
+current topics. You can also create a [new
 issue](https://github.com/gfbio/gfbio-ontology/issues/new) to discuss your
-ideas or just to give us feedback if something is missing or needs improvement.
-The issues are then referenced in the commit messages to track the changes and
-the progress so always stay up to date with the development around certain
-discussions.
+ideas or give feedback if something is missing or needs improvement. The issues
+are then referenced in the commit messages to track changes according to the
+discussions and the progress so you always stay up to date with the development
+around the topics.
 
-### Based on role
-
-* Roles
-  - moderator
-  - reviewer
-  - user
-
-### Technically
+#### Technically
 
 Committing to the repository works as follows.
 
