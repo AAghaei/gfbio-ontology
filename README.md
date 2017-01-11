@@ -190,66 +190,69 @@ Vocabulary is only provided for kingdoms (Plantae, Animalia, ...).
 
 #### Process Context
 
-The process part deals with aspects of biological processes.
+The process part deals with aspects relevant for biological processes.
 
-* Metadata (EASe)
+* Metadata (EASE)
 
 The schema captures the names of the processes and allows their classification.
+Additionally, the process part deals with interactions the involved partners,
+and the directzion and quality.
 
-To this end the vocabulary supports the annotation by providing a generic list
-of ecological processes which comprises e.g. the “Adaption”, “Speciation” and
-“Migration” (c.f. vocabulary: https://git.io/v1OfZ) and a coarse classification
-of the processes with e.g. “Movement”, “Exchange”, “Increase” or “Decrease”
-(c.f. vocabulary: https://git.io/v1Of4).
+* Vocabulary (Ontology)
 
-Additionally, the process part deals with interaction processes, where the user
-is presented with the option to specify the interacting partners based on
+The vocabulary supports an annotation by providing list of importnat ecological
+processes which comprises e.g. the “Adaption”, “Speciation” and “Migration”
+(c.f. vocabulary: https://git.io/v1OfZ) and a coarse classification of the
+processes with e.g. “Movement”, “Exchange”, “Increase” or “Decrease” (c.f.
+vocabulary: https://git.io/v1Of4). The interaction partners are based on
 kingdoms (e.g. “Plantae”, “Animalia”), the direction of the interaction
 (“Mutual”, “Affects”, “Is Affected By”) and the quality of the interaction
-(e.g. “Amensalism”, “Antagonism” c.f. vocabulary: https://git.io/v1OfE). Not
-only does this allow to select a particular process in the end but also to
-carry out a search for interaction process related datasets in a very generic
-way. For example, one can select all data that deals with the interaction
-between fungi and plants where the direction from the first to the second
-interaction partner is specified as “Affects” with the quality being
-“Antagonistic”. That would select then data dealing with fungi as plant
-parasites but not as symbionts.
+(e.g. “Amensalism”, “Antagonism” c.f. vocabulary: https://git.io/v1OfE).
 
-* Chemical
+#### Chemical Context
 
 The chemical part deals with all aspects of chemistry being part of biologcial
-data. This comprises chemical elements and compounds which have been measured
-as well their function in the biological context. The vocabulary here supports
-the annotation by providing a list of elements based on the periodic table as
+data.
+
+* Metadata (EASE)
+
+The schema captures chemical elements and compounds which have been measured in
+a project as well their function in the biological context.
+
+* Vocabulary (Ontology)
+
+The vocabulary is providing a list of elements based on the periodic table as
 well as a list of chemical compounds and classes of compounds e.g. “Lipids”,
 “Carbohydrates”, “Amino Acids” (c.f. vocabulary: https://git.io/v1OfT) which
 has been compiled from various sources Müller-Esterl 2004; Riedel and Janiak
 2007; Vollhardt, Schore, and Peter 2005) Moreover, the biological functions of
-chemicals which are relevant in ecological studies are covered by conceptual
-keywords like e.g. “Antibody”, “Attractant” or “Repellent” (c.f. vocabulary:
+chemicals which are relevant in biological studies are covered by concepts like
+e.g. “Antibody”, “Attractant” or “Repellent” (c.f. vocabulary:
 https://git.io/v1OfY) which has been inspired by the Chemical Entities of
 Biological Interest ontology (CHEBI)
 (http://www.ebi.ac.uk/ols/ontologies/chebi).
 
-* Method
+#### Method Context
 
 The methodological part deals with the general approach and a form of abstract
-localization of a study. The vocabulary provides a list of generic approach
-types being either “Virtual” (e.g. simulation), “Manipulative” (i.e. with
-experimental factors mostly controlled) or “Observational” (i.e. where plot
-selection creates factor gradients) (https://git.io/v1OfK). The localization of
-the study is captured by categories like “Microcosm” (e.g. lab experiment),
-“Mesocosm” (e.g. ecotron, greenhouse experiment) to “Macrocosm” (e.g. field
-studies) (https://git.io/v1Ofi). On top of that the method part of EASE
-captures the variables that either have been measured or manipulated in a
-study. The vocabulary provides a list of aspects which are measured and
-manipulated frequently containing conceptual keywords like e.g. the “Producer
-diversity”, the “Consumer density” or the “Nutrient availability”
-(https://git.io/v1OfD).
+localization of a study.
 
-* Topics (e.g. Biology, Medicine)
+* Metadata (EASE)
 
-...
+The metadata captures the general approach of a study as well as variables
+which have been manipulated and measured.
+
+* Vocabulary (Ontology)
+
+The vocabulary provides a list of generic study approach types being either
+“Virtual” (e.g. simulation), “Manipulative” (i.e. with experimental factors
+mostly controlled) or “Observational” (i.e. where plot selection creates factor
+gradients) (https://git.io/v1OfK). The localization of the study is captured by
+categories like “Microcosm” (e.g. lab experiment), “Mesocosm” (e.g. ecotron,
+greenhouse experiment) to “Macrocosm” (e.g. field studies)
+(https://git.io/v1Ofi). For the variables the vocabulary provides a list
+containing conceptual keywords like e.g. the “Producer diversity”, the
+“Consumer density” or the “Nutrient availability” (https://git.io/v1OfD).
 
 ### The resource
 
