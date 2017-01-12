@@ -1,11 +1,6 @@
 # Intro
 
-This is the repository which hosts the GFBio-ontology and some directly
-associated standards and tools. The ontology aims for an application ontology
-which supports the GFBio system components in the annotation and the discovery
-of biological data. The ontology is influenced by prior work from the Essential
-Annotation Schema for Ecology ([EASE](https://github.com/cpfaff/ease)) which is
-also contained as copy in this repository.
+This is the repository which hosts the GFBio-ontology and some directly associated standards and tools. The ontology is an application ontology which supports the GFBio ecosytem of sotware components in the annotation and the discovery of biological data. The ontology is influenced by prior work from the Essential Annotation Schema for Ecology ([EASE](https://github.com/cpfaff/ease), which is also contained as copy in this repository).
 
 ## Purpose of the ontology
 
