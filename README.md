@@ -19,8 +19,9 @@ and much more.
 
 * Discovery
 
-The ontology aims to provide anchors which allow to extend full text search
-queries for better search results extending the query with helpful concepts.
+The ontology aims to allow extending full text search queries for better search
+results. But it also provides anchors which can servea as a basis for creating
+a faceted navigation drill down.
 
 ## The core of the ontology
 
