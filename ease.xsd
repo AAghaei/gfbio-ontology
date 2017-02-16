@@ -86,14 +86,14 @@
 							    </xs:documentation>
 							  </xs:annotation>
 							</xs:element>
-							<xs:element name="time" type="xs:time" minOccurs="1" maxOccurs="1">
+							<xs:element name="time" type="xs:time" minOccurs="0" maxOccurs="1">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
 							      A single time in form HH:MM:SS conform to iso 8601.
 							    </xs:documentation>
 							  </xs:annotation>
 							</xs:element>
-							<xs:element name="timezone" type="Timezone" minOccurs="1" maxOccurs="1">
+							<xs:element name="timezone" type="Timezone" minOccurs="0" maxOccurs="1">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
 							      The olson timezone to capture the timezone of the given date and time in the
@@ -131,14 +131,14 @@
 							    </xs:documentation>
 							  </xs:annotation>
 							</xs:element>
-							<xs:element name="time" type="xs:time" minOccurs="1" maxOccurs="1">
+							<xs:element name="time" type="xs:time" minOccurs="0" maxOccurs="1">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
 							      A single time in form HH:MM:SS conform to iso 8601.
 							    </xs:documentation>
 							  </xs:annotation>
 							</xs:element>
-							<xs:element name="timezone" type="Timezone" minOccurs="1" maxOccurs="1">
+							<xs:element name="timezone" type="Timezone" minOccurs="0" maxOccurs="1">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
 							      The olson timezone to capture the timezone of the given date and time in the
@@ -193,7 +193,7 @@
 						      </xs:documentation>
 						    </xs:annotation>
 						  </xs:element>
-						  <xs:element name="geologicalEra" type="GeologicalEra" minOccurs="0" maxOccurs="1">
+						  <xs:element name="geologicalEra" type="GeologicalEra" minOccurs="1" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
 							The geological era contextualizing the search object. For example: Cenozoic,
@@ -252,7 +252,7 @@
 					</xs:annotation>
 					<xs:complexType>
 					  <xs:sequence>
-					    <xs:element name="temporalExtentType" type="TemporalExtentType" minOccurs="1" maxOccurs="1">
+					    <xs:element name="temporalExtentType" type="TemporalExtentType" minOccurs="0" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The temporal extent type is a categorical value that describes the extent of
@@ -261,7 +261,7 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="temporalResolutionType" type="TemporalResolutionType" minOccurs="1" maxOccurs="1">
+					    <xs:element name="temporalResolutionType" type="TemporalResolutionType" minOccurs="0" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The temporal resolution is a categorical value that describes the resolution of
@@ -434,6 +434,7 @@
 						      </xs:documentation>
 						    </xs:annotation>
 						  </xs:element>
+						  <!-- todo: subzone should be optional  -->
 						  <xs:element name="utmCoordinateSubZone" type="xs:integer" minOccurs="1" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
@@ -603,7 +604,8 @@
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
 				      Spheres is a wrapper that holds all sorts of information about spheres that
-				      describe the search object.
+				      describe the search object. Basically it describes where the measurements have
+				      been taken thus this is somewhat complementing the location part.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -658,6 +660,8 @@
 						      </xs:sequence>
 						    </xs:complexType>
 						  </xs:element>
+						  <!-- todo: that is somewhat redundant to the envelope set with the elevation and might be
+						       removed except it means somehitng significantly different -->
 						  <xs:element name="NumericAtmosphereLayers" minOccurs="0" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
@@ -2068,14 +2072,6 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="processType" type="ProcessType" minOccurs="1" maxOccurs="unbounded">
-					      <xs:annotation>
-						<xs:documentation xml:lang="en">
-						  The process type of the process given under Process Name for classification
-						  (e.g. Motion, Uptake, Release, Exchange)
-						</xs:documentation>
-					      </xs:annotation>
-					    </xs:element>
 					  </xs:sequence>
 					</xs:complexType>
 				      </xs:element>
@@ -2374,7 +2370,7 @@
 				    </xs:sequence>
 				  </xs:complexType>
 				</xs:element>
-				<xs:element name="DataFormats">
+				<xs:element name="DataFormats" minOccurs="0" maxOccurs="1">
 				  <xs:complexType>
 				    <xs:sequence>
 				      <xs:element name="DataFormat" minOccurs="1" maxOccurs="unbounded">
@@ -2394,7 +2390,7 @@
 				    </xs:sequence>
 				  </xs:complexType>
 				</xs:element>
-				<xs:element name="DataSources">
+				<xs:element name="DataSources" minOccurs="0" maxOccurs="1">
 				  <xs:complexType>
 				    <xs:sequence>
 				      <xs:element name="DataSource" minOccurs="1" maxOccurs="unbounded">
@@ -2403,8 +2399,8 @@
 					    <xs:element name="dataSourceType" type="DataSourceType" minOccurs="1" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
-						  The type of source the data has been derived from that is described with this
-						  annotation.
+						  The type of source the data has been derived from which is described with this
+						  annotation. E.g. meta analyses based on collection specimen, or literature.
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
@@ -2423,6 +2419,7 @@
 		  </xs:sequence>
 		</xs:complexType>
 	      </xs:element>
+
 	      <xs:element name="References" minOccurs="1" maxOccurs="1">
 		<xs:annotation>
 		  <xs:documentation xml:lang="en">
@@ -2508,7 +2505,7 @@
 				    </xs:documentation>
 				  </xs:annotation>
 				</xs:element>
-				<xs:element name="phoneNumber" type="xs:string" minOccurs="1" maxOccurs="unbounded">
+				<xs:element name="phoneNumber" type="xs:string" minOccurs="0" maxOccurs="unbounded">
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
 				      Phone number of the person
@@ -2521,7 +2518,8 @@
 			</xs:sequence>
 		      </xs:complexType>
 		    </xs:element>
-		    <xs:element name="Descriptions" minOccurs="1" maxOccurs="1">
+
+		    <xs:element name="Descriptions" minOccurs="0" maxOccurs="1">
 		      <xs:annotation>
 			<xs:documentation xml:lang="en">
 			  All types of descriptions related to the data described with the annotation
@@ -2529,25 +2527,36 @@
 		      </xs:annotation>
 		      <xs:complexType>
 			<xs:sequence>
-			  <xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1">
+			  <xs:element name="Description" minOccurs="1" maxOccurs="unbounded">
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
-				A title for the data which is describe.
+				All types of descriptions related to the data described with the annotation
 			      </xs:documentation>
 			    </xs:annotation>
-			  </xs:element>
-			  <xs:element name="abstract" type="xs:string" minOccurs="1" maxOccurs="1">
-			    <xs:annotation>
-			      <xs:documentation xml:lang="en">
-				An abstract that describes the object in all
-				its details. This can contain any information
-				that is suitable to inform somebody who does
-				not know your data nor your research. Write in
-				great detail about all aspects that
-				characterize the data (e.g. condidtions, setup,
-				organism, notes).
-			      </xs:documentation>
-			    </xs:annotation>
+			    <xs:complexType>
+			      <xs:sequence>
+				<xs:element name="title" type="xs:string" minOccurs="1" maxOccurs="1">
+				  <xs:annotation>
+				    <xs:documentation xml:lang="en">
+				      A title for the data which is describe.
+				    </xs:documentation>
+				  </xs:annotation>
+				</xs:element>
+				<xs:element name="abstract" type="xs:string" minOccurs="1" maxOccurs="1">
+				  <xs:annotation>
+				    <xs:documentation xml:lang="en">
+				      An abstract that describes the object in all
+				      its details. This can contain any information
+				      that is suitable to inform somebody who does
+				      not know your data nor your research. Write in
+				      great detail about all aspects that
+				      characterize the data (e.g. condidtions, setup,
+				      organism, notes).
+				    </xs:documentation>
+				  </xs:annotation>
+				</xs:element>
+			      </xs:sequence>
+			    </xs:complexType>
 			  </xs:element>
 			</xs:sequence>
 		      </xs:complexType>
@@ -9236,7 +9245,7 @@
 
   <xs:simpleType name="ElevationDatumVocabulary">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Mean Sea Level">
+      <xs:enumeration value="Above Mean Sea Level">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
 	    NA
@@ -9423,6 +9432,40 @@
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="Administrative Division">
+	<xs:annotation>
+	  <xs:documentation xml:lang="en">
+	    An administrative division, unit, entity, area or region, also
+	    referred to as a subnational entity, constituent unit, or country
+	    subdivision, is a portion of a country or other region delineated
+	    for the purpose of administration. Administrative divisions are
+	    granted a certain degree of autonomy and are usually required to
+	    manage themselves through their own local governments. Countries
+	    are divided up into these smaller units to make managing their land
+	    and the affairs of their people easier. For example, a country may
+	    be divided into provinces, which, in turn, are divided into
+	    counties, which, in turn, may be divided in whole or in part into
+	    municipalities (Wikipedia, https://goo.gl/I6a8sI)
+	  </xs:documentation>
+	</xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Nature Reserve">
+	<xs:annotation>
+	  <xs:documentation xml:lang="en">
+	    A nature reserve (natural reserve, bioreserve, (natural/nature)
+	    preserve or (national/nature) conserve) is a protected area of
+	    importance for wildlife, flora, fauna or features of geological or
+	    other special interest, which is reserved and managed for
+	    conservation and to provide special opportunities for study or
+	    research. Nature reserves may be designated by government
+	    institutions in some countries, or by private landowners, such as
+	    charities and research institutions, regardless of nationality.
+	    Nature reserves fall into different IUCN categories depending on
+	    the level of protection afforded by local laws (Wikipedia,
+	    https://goo.gl/Zq6GvE).
+	  </xs:documentation>
+	</xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="Human Settlement">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
@@ -9511,7 +9554,6 @@
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
-
       <!-- extension -->
       <xs:pattern value="[A-zäöüÄÖÜß0-9 ]*"/>
     </xs:restriction>
@@ -14360,140 +14402,6 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="ProcessTypeVocabulary">
-    <xs:annotation>
-      <xs:documentation xml:lang="en">
-	The type of a process.
-      </xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="Motion">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    Motion comprises all sorts of motion process types like for example
-	    the uptake, release, exchange or movement.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Uptake">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies transport processes with a focus on an uptake. This
-	    could be for example nutrient uptake.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Release">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies transport processes with a focus on a release. This
-	    could be the release of nutrients in the process of decomposition.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Exchange">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies transport processes whith a focus on an exchange.
-	    This could be for example the exchange of gases between the surface
-	    of the sea and the atmosphere.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Movement">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies transport processes with a focus on a movement.
-	    This could be for example the particle transport in surface runof
-	    or the movemnt of energy with ocean currents.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Transport">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    Transport active movements of matter and energy that appear across
-	    all scales of ecological interest. For example like soil particles
-	    in surface runoff or seeds dispersal for exmaple by birds.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Change">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    Change embraces all sorts of change types like the removal the
-	    addition the increase and the decrease.
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Removal">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies as transformation with the focus of a removal. This
-	    could be water purification for example. Removal [AB] -> [A]
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Addition">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies transformation processes with a focus on an
-	    addition.This could be pollution. Addition [A] -> [AB]
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Increase">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    Tis classifies a transformation processes where the focus is on an
-	    increase. This could be for example the growth of a tree. Or the
-	    increase of a population. Increase (a to A)
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Decrease">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies a transformation process where the focus in on a
-	    decrease. This could be for example habitat loss. Decrease (A to a)
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Transition">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies a transformation process where the focus is on a
-	    transition. This could be for example successsion in a forest.
-	    Transition (A to B)
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="Conversion">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    This classifies a transformation process where the focus in on a
-	    conversion. Conversion (AB to/from B + A)
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
-      <!-- extension -->
-      <xs:pattern value="[A-zäöüÄÖÜß0-9 ]*"/>
-    </xs:restriction>
-  </xs:simpleType>
-
-  <xs:complexType name="ProcessType">
-    <xs:simpleContent>
-      <xs:extension base="ProcessTypeVocabulary">
-	<xs:attribute name="uri">
-	  <xs:simpleType>
-	    <xs:restriction base="xs:anyURI">
-	    </xs:restriction>
-	  </xs:simpleType>
-	</xs:attribute>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
   <xs:simpleType name="InteractionPartnerVocabulary">
     <xs:annotation>
       <xs:documentation xml:lang="en">
@@ -16371,15 +16279,6 @@
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="Functional Group">
-	<xs:annotation>
-	  <xs:documentation xml:lang="en">
-	    The functional group is an atom or a group of atoms, which defines the
-	    characteristic physical and chemical properties of families of organic
-	    compounds. (http://goldbook.iupac.org/F02555.html)
-	  </xs:documentation>
-	</xs:annotation>
-      </xs:enumeration>
       <!-- extension -->
       <xs:pattern value="[A-zäöüÄÖÜß0-9 ]*"/>
     </xs:restriction>
@@ -16425,7 +16324,7 @@
       <xs:enumeration value="Nucleic Acid">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    Nucleic acids are biopolymers essenttial fpor all known forms of life. Nucleic
+	    Nucleic acids are biopolymers essenttial for all known forms of life. Nucleic
 	    acids, which include DNA and RNA are made of monomers known as nucleotides.
 	    (https://en.wikipedia.org/wiki/Nucleic_acid)
 	  </xs:documentation>
@@ -17761,7 +17660,7 @@
       <xs:enumeration value="Producer Diversity">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    This includes richness, functional diversity, shannon diversity
+	    This includes richness, functional diversity, shannon diversity, rarefaction
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
@@ -17775,22 +17674,23 @@
       <xs:enumeration value="Producer Density">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    All density or packing related manipulation of consumers. Ammount
-	    of certain individuals per plot.
+	    All density or packing related to consumers. E.g. ammount
+	    of certain individuals per plot or coverage.
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Producer Structure">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    The size, height, leaf area index, age structure
+	    The size, height, leaf area index, wood density, age structure of a
+	    stand, leaf mass ratio, biomass
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Consumer Diversity">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    All diversity related factor of consumers, richness, shannon
+	    This includes richness, functional diversity, shannon diversity, rarefaction
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
@@ -17804,7 +17704,7 @@
       <xs:enumeration value="Consumer Density">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    All spatial related manipulations to consumers (e.g. density of
+	    E.g. spatial related manipulations to consumers (e.g. density of
 	    grashoppers per plot)
 	  </xs:documentation>
 	</xs:annotation>
@@ -17998,7 +17898,7 @@
       <xs:enumeration value="Space">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    Time as an experimental design parameter. For example plots are selected with a
+	    Space as an experimental design parameter. For example plots are selected with a
 	    specific distance to road to see if dear browsing is affected by disturbances
 	    coming from that roads.
 	  </xs:documentation>
@@ -18031,10 +17931,11 @@
 	      <xs:enumeration value="measured">
 		<xs:annotation>
 		  <xs:documentation xml:lang="en">
-		    A variable that has been measured due to
+		    A variable that has been measured
 		  </xs:documentation>
 		</xs:annotation>
 	      </xs:enumeration>
+	      <!-- todo: an estimate might be good to have as well -->
 	    </xs:restriction>
 	  </xs:simpleType>
 	</xs:attribute>
@@ -18045,6 +17946,7 @@
   <xs:simpleType name="FactorTypeVocabulary">
     <xs:restriction base="xs:string">
       <!-- biotic -->
+      <!-- the ones are rather a factor attributes   -->
       <xs:enumeration value="Biotic">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
@@ -18068,6 +17970,9 @@
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
+
+      <!-- todo: the two above and the ones below are somewhat of a different quality. This
+	   feels odd during the annotation: These are factor types -->
       <xs:enumeration value="Disturbance">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
@@ -18396,9 +18301,9 @@
   <xs:simpleType name="DataSourceTypeVocabulary">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-	The base object describes the type of source scientific data is derived from
-	(e.g. Specimen, Literature, Multimedia (e.g. audio, video), Material Sample:
-	e.g Tissue; Mineral, Image: Photo or Drawing)
+	The source the scientific data is derived from (e.g. Specimen,
+	Literature, Multimedia (e.g. audio, video), Material Sample: e.g
+	Tissue; Mineral, Image: Photo or Drawing)
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -18621,6 +18526,13 @@
 	</xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="Contact">
+	<xs:annotation>
+	  <xs:documentation xml:lang="en">
+	    The author of the data
+	  </xs:documentation>
+	</xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Contributor">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
 	    The author of the data
