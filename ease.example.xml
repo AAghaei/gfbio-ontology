@@ -35,8 +35,8 @@
           </TimePeriods>
           <TemporalResolutions>
             <TemporalResolution>
-              <temporalExtentType uri="http://www.xsd2xml.com">str1234</temporalExtentType>
-              <temporalResolutionType uri="http://www.xsd2xml.com">str1234</temporalResolutionType>
+              <temporalExtentType uri="http://www.xsd2xml.com" modifyer="1234">str1234</temporalExtentType>
+              <temporalResolutionType uri="http://www.xsd2xml.com" modifyer="1234">str1234</temporalResolutionType>
             </TemporalResolution>
           </TemporalResolutions>
         </TimeContext>
@@ -256,6 +256,7 @@
                 <division uri="http://www.xsd2xml.com">str1234</division>
                 <order uri="http://www.xsd2xml.com">str1234</order>
                 <family uri="http://www.xsd2xml.com">str1234</family>
+                <name>str1234</name>
                 <OrganismName>
                   <BacterialName>
                     <fullBacterialName>str1234</fullBacterialName>
@@ -363,16 +364,6 @@
               <factorType uri="http://www.xsd2xml.com">str1234</factorType>
             </Factor>
           </Factors>
-          <DataFormats>
-            <DataFormat>
-              <dataFormatType uri="http://www.xsd2xml.com">str1234</dataFormatType>
-            </DataFormat>
-          </DataFormats>
-          <DataSources>
-            <DataSource>
-              <dataSourceType uri="http://www.xsd2xml.com">str1234</dataSourceType>
-            </DataSource>
-          </DataSources>
         </MethodContext>
       </Context>
     </Contexts>
@@ -403,12 +394,9 @@
       <Resource>
         <OnlineResources>
           <OnlineResource>
-            <Uris>
-              <Uri>
-                <downloadUrl>http://www.xsd2xml.com</downloadUrl>
-                <referenceUrl>http://www.xsd2xml.com</referenceUrl>
-              </Uri>
-            </Uris>
+            <downloadUrl>http://www.xsd2xml.com</downloadUrl>
+            <referenceUrl>http://www.xsd2xml.com</referenceUrl>
+            <dataFormat uri="http://www.xsd2xml.com">str1234</dataFormat>
           </OnlineResource>
         </OnlineResources>
         <OfflineResources>
@@ -417,6 +405,7 @@
             <fileName>str1234</fileName>
             <filePath>str1234</filePath>
             <mimeType>???</mimeType>
+            <dataFormat uri="http://www.xsd2xml.com">str1234</dataFormat>
           </OfflineResource>
         </OfflineResources>
         <EmbeddedResources>
@@ -428,6 +417,7 @@
               <encodingDate>2012-12-13</encodingDate>
               <encodingTime>12:12:12</encodingTime>
               <sha2hash>str1234</sha2hash>
+              <dataFormat uri="http://www.xsd2xml.com">str1234</dataFormat>
             </Base64Resource>
           </EmbeddedResource>
         </EmbeddedResources>

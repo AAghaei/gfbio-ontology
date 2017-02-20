@@ -1,9 +1,8 @@
-﻿<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" version="0.0.1">
+﻿<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0.1">
   <xs:element name="Ease">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-	The Ease element is the root element of the Comprehensive Annotation
-	for Ecology schema.
+	This is the root element of the Essential Annotation Schema for Ecology.
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
@@ -11,8 +10,10 @@
 	<xs:element name="Object" minOccurs="1" maxOccurs="1">
 	  <xs:annotation>
 	    <xs:documentation xml:lang="en">
-	      The Object describes one object described via the ease annotation schema.
-	      It contains all the context information the references and the resources.
+	      The Object wraps all information stored in an annotation.
+	      It contains context information for the data but also the
+	      references and the resources which allow to acccess the
+	      data described.
 	    </xs:documentation>
 	  </xs:annotation>
 	  <xs:complexType>
@@ -20,7 +21,9 @@
 	      <xs:element name="Contexts" minOccurs="1" maxOccurs="1">
 		<xs:annotation>
 		  <xs:documentation xml:lang="en">
-		    Context is a wrapper around search object contexts
+		    The Contexts element is a wrapper around the different
+		    contexts which have been selecte representing distinct
+		    dimensions of information in the search space of ecology.
 		  </xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
@@ -28,9 +31,9 @@
 		    <xs:element name="Context" minOccurs="1" maxOccurs="unbounded">
 		      <xs:annotation>
 			<xs:documentation xml:lang="en">
-			  The Contexts capture biologcial context information in different categories
-			  These categories are time, space, sphere, orgnism, biome, chemical, method
-			  and process.
+			  The Context captures biologcial context information
+			  in different categories like time, space, sphere,
+			  orgnism, biome, chemical, method and process.
 			</xs:documentation>
 		      </xs:annotation>
 		      <xs:complexType>
@@ -38,8 +41,9 @@
 			  <xs:element name="TimeContext" minOccurs="0" maxOccurs="1">
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
-				The time context allows to capture the quantitative and qualitative temporal
-				aspects that describe the the search object.
+				The time context allows to capture the
+				quantitative and qualitative temporal aspects
+				that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -47,7 +51,10 @@
 				<xs:element name="TimeRanges" minOccurs="0" maxOccurs="1">
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
-				      A wrapper around time ranges
+				      The time range allows to capture the
+				      quantitative and qualitative temporal
+				      aspects of the temporal extetent which
+				      characterize the object.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -55,9 +62,10 @@
 				      <xs:element name="TimeRange" minOccurs="1" maxOccurs="1">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    The time range captures the temporal extent of the search
-					    object. If both the start and the end date are equal this
-					    represents a point in time.
+					    The time range allows to capture the
+					    quantitative and qualitative temporal
+					    aspects of the temporal extetent which
+					    characterize the object.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -65,8 +73,14 @@
 					    <xs:element name="RangeStart" minOccurs="1" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
-						  The start of the time range in form of a local date and local time associated
-						  with a timezone. This can be e.g. the start of the data aquisition.
+						  The start of the time range in
+						  form of a local date and
+						  local time associated with a
+						  tz-database timezone. This
+						  can be used e.g. to designate
+						  the start of a study or the
+						  data aquisition or a field
+						  campaign.
 						</xs:documentation>
 					      </xs:annotation>
 					      <xs:complexType>
@@ -74,7 +88,7 @@
 						  <xs:element name="DateTime" minOccurs="1" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							This element captures a local time range with date, time and olson timezone
+							This element captures a local time with date and olson timezone
 						      </xs:documentation>
 						    </xs:annotation>
 						    <xs:complexType>
@@ -96,8 +110,8 @@
 							<xs:element name="timezone" type="Timezone" minOccurs="0" maxOccurs="1">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
-							      The olson timezone to capture the timezone of the given date and time in the
-							      range (e.g. Europe/Berlin)
+							      The olson timezone of the given date and time in the
+							      (e.g. Europe/Berlin)
 							    </xs:documentation>
 							  </xs:annotation>
 							</xs:element>
@@ -110,8 +124,14 @@
 					    <xs:element name="RangeEnd" minOccurs="1" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
-						  The end of the time range in form of a local date and local time associated
-						  with a timezone. This can be e.g. the end of the data aquisition.
+						  The end of the time range in
+						  form of a local date and
+						  local time associated with a
+						  tz-database timezone. This
+						  can be used e.g. to designate
+						  the end of a study or the
+						  data aquisition or a field
+						  campaign.
 						</xs:documentation>
 					      </xs:annotation>
 					      <xs:complexType>
@@ -119,7 +139,7 @@
 						  <xs:element name="DateTime" minOccurs="1" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							This element captures a local time range with date, time and olson timezone
+							This element captures a local time with date and olson timezone
 						      </xs:documentation>
 						    </xs:annotation>
 						    <xs:complexType>
@@ -141,8 +161,8 @@
 							<xs:element name="timezone" type="Timezone" minOccurs="0" maxOccurs="1">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
-							      The olson timezone to capture the timezone of the given date and time in the
-							      range (e.g. Europe/Berlin)
+							      The olson timezone of the given date and time in the
+							      (e.g. Europe/Berlin)
 							    </xs:documentation>
 							  </xs:annotation>
 							</xs:element>
@@ -161,8 +181,10 @@
 				<xs:element name="TimePeriods" minOccurs="0" maxOccurs="1">
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
-				      The time periods is a wrapper that can contain all sorts of time periods that
-				      reference the temporal context of the search object.
+				      The time periods is a wrapper around all
+				      sorts of time periods that provide a
+				      reference for the temporal context of the
+				      the object.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -170,7 +192,10 @@
 				      <xs:element name="TimePeriod" minOccurs="1" maxOccurs="1">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    The time period contains one possible time period describing the search object.
+					    The time periods is a wrapper around all
+					    sorts of time periods that provide a
+					    reference for the temporal context of the
+					    the object.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -178,9 +203,13 @@
 					    <xs:element name="GeologicalTimePeriod" minOccurs="1" maxOccurs="unbounded">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
-						  The geological age is a container that holds one of the possible geological
-						  ages which is relevant for describing the search object. E.g. a sample that
-						  comes from the ordovician time period.
+						  The element holds a
+						  description of one geological
+						  age relevant for describing
+						  the object. E.g. when you
+						  have samples with fossils in
+						  lime stone from the
+						  ordovician time period.
 						</xs:documentation>
 					      </xs:annotation>
 					      <xs:complexType>
@@ -188,7 +217,7 @@
 						  <xs:element name="geologicalEon" type="GeologicalEon" minOccurs="1" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							The geological eon contextualizing the search object. For example: Phanerozoic,
+							The geological eon contextualizing the object. For example: Phanerozoic,
 							Precambrian.
 						      </xs:documentation>
 						    </xs:annotation>
@@ -196,7 +225,7 @@
 						  <xs:element name="geologicalEra" type="GeologicalEra" minOccurs="1" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							The geological era contextualizing the search object. For example: Cenozoic,
+							The geological era contextualizing the object. For example: Cenozoic,
 							Mesozoic, Paleozoic.
 						      </xs:documentation>
 						    </xs:annotation>
@@ -204,7 +233,7 @@
 						  <xs:element name="geologicalPeriod" type="GeologicalPeriod" minOccurs="0" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							The geological period contextualizing the search object. For example:
+							The geological period contextualizing the object. For example:
 							Quaternary, Neogene, Paleogene.
 						      </xs:documentation>
 						    </xs:annotation>
@@ -212,7 +241,7 @@
 						  <xs:element name="geologicalEpoch" type="GeologicalEpoch" minOccurs="0" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							The geological epoch contextualizing the search object. For example: Holocene,
+							The geological epoch contextualizing the object. For example: Holocene,
 							Pleistocene, Pilocene.
 						      </xs:documentation>
 						    </xs:annotation>
@@ -220,7 +249,7 @@
 						  <xs:element name="geologicalAge" type="GeologicalAge" minOccurs="0" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
-							The geological age contextualizing the search object. For example: Calabrian,
+							The geological age contextualizing the object. For example: Calabrian,
 							Gelasian, Piacenzian.
 						      </xs:documentation>
 						    </xs:annotation>
@@ -238,7 +267,7 @@
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
 				      A wrapper around temporal aspects describing the temporal resolution of the
-				      search object.
+				      object.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -247,7 +276,7 @@
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
 					    The temporal resolution caputres the temporal aspects of the setup or study the
-					    search object comes from.
+					    object comes from.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -256,7 +285,7 @@
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The temporal extent type is a categorical value that describes the extent of
-						  the setup the search object comes from (e.g. Second, Minute, Hour, Day, Week,
+						  the setup the object comes from (e.g. Second, Minute, Hour, Day, Week,
 						  ...).
 						</xs:documentation>
 					      </xs:annotation>
@@ -265,7 +294,7 @@
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The temporal resolution is a categorical value that describes the resolution of
-						  the setup the search object comes from (e.g. Second, Minute, Hour, Day, Week,
+						  the setup the object comes from (e.g. Second, Minute, Hour, Day, Week,
 						  ...).
 						</xs:documentation>
 					      </xs:annotation>
@@ -283,7 +312,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The space context allows to capture the quantitative and qualitative spatial
-				aspects that describe the the search object.
+				aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -296,7 +325,7 @@
 				  </xs:annotation>
 				  <xs:complexType>
 				    <xs:sequence>
-				      <xs:element name="BoundingBox" minOccurs="1" maxOccurs="1">
+				      <xs:element name="BoundingBox" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
 					    The bounding box captures the spatial extent by four geographic coordinates
@@ -346,16 +375,19 @@
 				<xs:element name="Elevations" minOccurs="0" maxOccurs="1">
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
-				      A wraper that can hold several elevations.
+				      A wraper that can hold several elevation descriptions.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
 				    <xs:sequence>
-				      <xs:element name="Elevation" minOccurs="1" maxOccurs="1">
+				      <xs:element name="Elevation" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    The elevation complements the bounding box and specifies the upper and lower
-					    most boundaries in space contextualilzing the search object.
+					    The elevation complements the
+					    bounding box in a vertiacl manner
+					    and specifies the upper and lower
+					    boundaries in space which contextualize
+					    the object.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -363,7 +395,7 @@
 					    <xs:element name="maximumElevation" type="xs:decimal" minOccurs="1" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
-						  The maximum elevation contextualizing the search object
+						  The maximum elevation contextualizing the object
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
@@ -377,7 +409,7 @@
 					    <xs:element name="minimumElevation" type="xs:decimal" minOccurs="1" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
-						  The minimum elevation contextualizing the search object
+						  The minimum elevation contextualizing the object
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
@@ -404,8 +436,10 @@
 				<xs:element name="Coordinates" minOccurs="0" maxOccurs="1">
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
-				      The coordinates element is a wrapper that can capture all sorts of coordinates
-				      that are relevant for the search object.
+				      The coordinates element is a wrapper that
+				      can capture all sorts of coordinate types
+				      which specify locations for the object
+				      (curr supporting UTM coordinates)
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -413,7 +447,10 @@
 				      <xs:element name="Coordinate" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    Holds one single coordinate
+					    The coordinates element is a wrapper that
+					    can capture all sorts of coordinate types
+					    which specify locations for the object
+					    (curr supporting UTM coordinates)
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -422,7 +459,7 @@
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The utm coordinate is a container that holds one utm coordinate relevant for
-						  the search object.
+						  the object.
 						</xs:documentation>
 					      </xs:annotation>
 					      <xs:complexType>
@@ -497,8 +534,7 @@
 				<xs:element name="Locations" minOccurs="0" maxOccurs="1">
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
-				      Locations is a wrapper that contains all sorts of named locations
-				      contextualizing the search object.
+				      Locations wraps up locations information contextualizing the object.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -506,8 +542,7 @@
 				      <xs:element name="Location" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    The named location is a container holds one named location. This element exists
-					    for extendability of the schema and provides a semantic anchor.
+					    Location wraps up locations information contextualizing the object.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -550,7 +585,7 @@
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
 				      A wrapper around spatial aspects describing the spatial resolution
-				      contextualizing the search object.
+				      contextualizing the object.
 				    </xs:documentation>
 				  </xs:annotation>
 				  <xs:complexType>
@@ -559,7 +594,7 @@
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
 					    The spatial resolution caputres the spatial aspects of the setup or study the
-					    search object comes from.
+					    object comes from.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -568,7 +603,7 @@
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The spatial resolution type is a categorical value that describes the spatial
-						  resolution of the setup the search object comes from (e.g. Point, Plot, Region,
+						  resolution of the setup the object comes from (e.g. Point, Plot, Region,
 						  Continent, Global).
 						</xs:documentation>
 					      </xs:annotation>
@@ -577,7 +612,7 @@
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The spatial extent type is a categorical value that describes the spatial
-						  extent of the setup the search object comes from (e.g. Point, Plot, Region,
+						  extent of the setup the object comes from (e.g. Point, Plot, Region,
 						  Continent, Global).
 						</xs:documentation>
 					      </xs:annotation>
@@ -595,7 +630,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The sphere context allows to capture the quantitative and qualitative sphere
-				related aspects that describe the the search object.
+				related aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -604,7 +639,7 @@
 				  <xs:annotation>
 				    <xs:documentation xml:lang="en">
 				      Spheres is a wrapper that holds all sorts of information about spheres that
-				      describe the search object. Basically it describes where the measurements have
+				      describe the object. Basically it describes where the measurements have
 				      been taken thus this is somewhat complementing the location part.
 				    </xs:documentation>
 				  </xs:annotation>
@@ -613,7 +648,7 @@
 				      <xs:element name="Sphere" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    Sphere contains information about a single sphere.
+					    Sphere contains information about a sphere.
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -639,7 +674,7 @@
 							<xs:element name="NamedAtmosphereLayer" minOccurs="1" maxOccurs="unbounded">
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
-							      Captures the name of a single atmosphere layer that describing the search
+							      Captures the name of a  atmosphere layer that describing the search
 							      object. E.g. Troposphere when air temperature measures have been taken. (also.
 							      Strato-, Meso-, Ionosphere)
 							    </xs:documentation>
@@ -675,7 +710,8 @@
 							  <xs:annotation>
 							    <xs:documentation xml:lang="en">
 							      Numeric atmosphere layer allows to specify an atmospheric layer relevant for
-							      the data in a numeric form.
+							      the data in a numeric form. It could be used to indicate if measures on the atmosphere
+							      have been taken involving a certain height or slice of the atmosphere.
 							    </xs:documentation>
 							  </xs:annotation>
 							  <xs:complexType>
@@ -683,7 +719,7 @@
 							      <xs:element name="minimumAtmosphereHeight" type="xs:decimal" minOccurs="1" maxOccurs="1">
 								<xs:annotation>
 								  <xs:documentation xml:lang="en">
-								    The minimum height in the atmosphere relevant for the search object.
+								    The minimum height in the atmosphere relevant for the object.
 								  </xs:documentation>
 								</xs:annotation>
 							      </xs:element>
@@ -697,7 +733,7 @@
 							      <xs:element name="maximumAtmosphereHeight" type="xs:decimal" minOccurs="1" maxOccurs="1">
 								<xs:annotation>
 								  <xs:documentation xml:lang="en">
-								    The maximum height in the atmosphere relevant for the search object.
+								    The maximum height in the atmosphere relevant for the object.
 								  </xs:documentation>
 								</xs:annotation>
 							      </xs:element>
@@ -721,7 +757,7 @@
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The hydrosphere element is a wrapper around all qualitative and quantitative
-						  values revolving around the hydrosphere the contextualize the search object.
+						  values revolving around the hydrosphere the contextualize the object.
 						</xs:documentation>
 					      </xs:annotation>
 					      <xs:complexType>
@@ -785,7 +821,7 @@
 										    <xs:documentation xml:lang="en">
 										      The vertical river zone
 										      contains one vertical river zone
-										      describing the search object (Floodplain,
+										      describing the object (Floodplain,
 										      River bank, River Water, River Bed)
 										    </xs:documentation>
 										  </xs:annotation>
@@ -822,7 +858,7 @@
 									    <xs:annotation>
 									      <xs:documentation xml:lang="en">
 										A lake zone contains one possible lake zone
-										describing the search object.
+										describing the object.
 									      </xs:documentation>
 									    </xs:annotation>
 									    <xs:complexType>
@@ -841,7 +877,7 @@
 										  <xs:annotation>
 										    <xs:documentation xml:lang="en">
 										      Pelagig lake zone contains one pelagig zone
-										      describing the search object (epilimnion, metalimnion,
+										      describing the object (epilimnion, metalimnion,
 										      hypolimnion).
 										    </xs:documentation>
 										  </xs:annotation>
@@ -1057,7 +1093,7 @@
 									  <xs:element name="SoilTexture" minOccurs="1" maxOccurs="unbounded">
 									    <xs:annotation>
 									      <xs:documentation xml:lang="en">
-										The soil texture captures a single soil texture
+										The soil texture captures a  soil texture
 									      </xs:documentation>
 									    </xs:annotation>
 									    <xs:complexType>
@@ -1303,7 +1339,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The biome context allows to capture the quantitative and qualitative biome
-				related aspects that describe the the search object.
+				related aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -1338,14 +1374,14 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="biomeHumidityType" type="BiomeHumidityType" minOccurs="1" maxOccurs="1">
+					    <xs:element name="biomeHumidityType" type="BiomeHumidityType" minOccurs="0" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The water availability within the biome (Semi Humid, Humid, Arid, Semi Arid)
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="biomeContinentalityType" type="BiomeContinentalityType" minOccurs="1" maxOccurs="1">
+					    <xs:element name="biomeContinentalityType" type="BiomeContinentalityType" minOccurs="0" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The influence to the biome (Continental, Maritime)
@@ -1608,7 +1644,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The organism context captures the quantitative and qualitative organism related
-				aspects that describe the the search object.
+				aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -1681,6 +1717,17 @@
 						      </xs:documentation>
 						    </xs:annotation>
 						  </xs:element>
+						  <xs:element name="species" type="xs:string" minOccurs="0" maxOccurs="1">
+						    <xs:annotation>
+						      <xs:documentation xml:lang="en">
+							The generic full name of the organism including author and year
+							if required.
+						      </xs:documentation>
+						    </xs:annotation>
+						  </xs:element>
+						  <!-- note: I am not sure anymore if this is really required. Maybe the linnean  -->
+						  <!-- topology provided above will suffice for the description and discovery  -->
+						  <!-- purposes -->
 						  <xs:element name="OrganismName" minOccurs="0" maxOccurs="1">
 						    <xs:annotation>
 						      <xs:documentation xml:lang="en">
@@ -2037,7 +2084,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The process context captures the quantitative and qualitative process related
-				aspects that describe the the search object.
+				aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -2053,7 +2100,7 @@
 				      <xs:element name="Process" minOccurs="1" maxOccurs="unbounded">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    A process that is relevant for the search object
+					    A process that is relevant for the object
 					  </xs:documentation>
 					</xs:annotation>
 					<xs:complexType>
@@ -2065,7 +2112,7 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="processSubject" type="ProcessSubject" minOccurs="1" maxOccurs="unbounded">
+					    <xs:element name="processSubject" type="ProcessSubject" minOccurs="0" maxOccurs="unbounded">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The subject of the process given under process name (e.g. Organism, Chemical, Matter, Energy)
@@ -2145,7 +2192,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The chemical context allows to capture the quantitative and qualitative
-				chemical related aspects that describe the the search object.
+				chemical related aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -2231,7 +2278,7 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="compoundClass" type="CompoundClass" minOccurs="1" maxOccurs="unbounded">
+					    <xs:element name="compoundClass" type="CompoundClass" minOccurs="0" maxOccurs="unbounded">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  A compound class for the chemical compound given under compund name as coarse
@@ -2239,7 +2286,7 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="compoundType" type="CompoundType" minOccurs="1" maxOccurs="unbounded">
+					    <xs:element name="compoundType" type="CompoundType" minOccurs="0" maxOccurs="unbounded">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  A compound type for the chemical compound given under the compund name. It
@@ -2291,7 +2338,7 @@
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
 				The method context allows to capture the quantitative and qualitative method
-				related aspects that describe the the search object.
+				related aspects that describe the the object.
 			      </xs:documentation>
 			    </xs:annotation>
 			    <xs:complexType>
@@ -2357,50 +2404,10 @@
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
-					    <xs:element name="factorType" type="FactorType" minOccurs="1" maxOccurs="1">
+					    <xs:element name="factorType" type="FactorType" minOccurs="0" maxOccurs="1">
 					      <xs:annotation>
 						<xs:documentation xml:lang="en">
 						  The type of given factor (Biotic, Abiotic, Disturbance, ...)
-						</xs:documentation>
-					      </xs:annotation>
-					    </xs:element>
-					  </xs:sequence>
-					</xs:complexType>
-				      </xs:element>
-				    </xs:sequence>
-				  </xs:complexType>
-				</xs:element>
-				<xs:element name="DataFormats" minOccurs="0" maxOccurs="1">
-				  <xs:complexType>
-				    <xs:sequence>
-				      <xs:element name="DataFormat" minOccurs="1" maxOccurs="unbounded">
-					<xs:complexType>
-					  <xs:sequence>
-					    <xs:element name="dataFormatType" type="DataFormatType" minOccurs="1" maxOccurs="1">
-					      <xs:annotation>
-						<xs:documentation xml:lang="en">
-						  The file type of the data described with the annotation. For example (Audio,
-						  Image, Table, Video)
-						</xs:documentation>
-					      </xs:annotation>
-					    </xs:element>
-					  </xs:sequence>
-					</xs:complexType>
-				      </xs:element>
-				    </xs:sequence>
-				  </xs:complexType>
-				</xs:element>
-				<xs:element name="DataSources" minOccurs="0" maxOccurs="1">
-				  <xs:complexType>
-				    <xs:sequence>
-				      <xs:element name="DataSource" minOccurs="1" maxOccurs="unbounded">
-					<xs:complexType>
-					  <xs:sequence>
-					    <xs:element name="dataSourceType" type="DataSourceType" minOccurs="1" maxOccurs="1">
-					      <xs:annotation>
-						<xs:documentation xml:lang="en">
-						  The type of source the data has been derived from which is described with this
-						  annotation. E.g. meta analyses based on collection specimen, or literature.
 						</xs:documentation>
 					      </xs:annotation>
 					    </xs:element>
@@ -2578,12 +2585,11 @@
 		    <xs:element name="Resource" minOccurs="1" maxOccurs="unbounded">
 		      <xs:annotation>
 			<xs:documentation xml:lang="en">
-			  A single resource as reference
+			  A  resource as reference
 			</xs:documentation>
 		      </xs:annotation>
 		      <xs:complexType>
 			<xs:sequence>
-
 			  <xs:element name="OnlineResources" minOccurs="0" maxOccurs="1">
 			    <xs:annotation>
 			      <xs:documentation xml:lang="en">
@@ -2596,47 +2602,30 @@
 				<xs:element name="OnlineResource" minOccurs="0" maxOccurs="unbounded">
 				  <xs:complexType>
 				    <xs:sequence>
-				      <xs:element name="Uris" minOccurs="1" maxOccurs="1">
+				      <xs:element name="downloadUrl" type="xs:anyURI" maxOccurs="1">
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
-					    The object uris is a wrapper that contains all sorts of uris that are needed to
-					    reference the search object.
+					    The URL to the download of the data. Using this URL with a download manager
+					    should return the raw data e.g. csv or whatever kind of data type is described.
 					  </xs:documentation>
 					</xs:annotation>
-					<xs:complexType>
-					  <xs:sequence>
-					    <xs:element name="Uri" minOccurs="1" maxOccurs="unbounded">
-					      <xs:annotation>
-						<xs:documentation xml:lang="en">
-						  The object uri is a container that holds one uri type of all potentially
-						  possible uri types associated with an object. This element exists for
-						  extendability of the schema and provides a semantic anchor.
-						</xs:documentation>
-					      </xs:annotation>
-					      <xs:complexType>
-						<xs:sequence>
-						  <xs:element name="downloadUrl" type="xs:anyURI" maxOccurs="1">
-						    <xs:annotation>
-						      <xs:documentation xml:lang="en">
-							The URL to the download of the data. Using this URL with a download manager
-							should return the raw data e.g. csv or whatever kind of data type is described.
-						      </xs:documentation>
-						    </xs:annotation>
-						  </xs:element>
-						  <xs:element name="referenceUrl" type="xs:anyURI" maxOccurs="1">
-						    <xs:annotation>
-						      <xs:documentation xml:lang="en">
-							The object reference URL can be used to link the annotation to more contextual
-							information for example the project homepage with more extensive metadata of
-							the search object described with the annotation.
-						      </xs:documentation>
-						    </xs:annotation>
-						  </xs:element>
-						</xs:sequence>
-					      </xs:complexType>
-					    </xs:element>
-					  </xs:sequence>
-					</xs:complexType>
+				      </xs:element>
+				      <xs:element name="referenceUrl" type="xs:anyURI" maxOccurs="1">
+					<xs:annotation>
+					  <xs:documentation xml:lang="en">
+					    The object reference URL can be used to link the annotation to more contextual
+					    information for example the project homepage with more extensive metadata of
+					    the object described with the annotation.
+					  </xs:documentation>
+					</xs:annotation>
+				      </xs:element>
+				      <xs:element name="dataFormat" type="DataFormat" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+					  <xs:documentation xml:lang="en">
+					    The file type of the data described with the annotation. For example (Audio,
+					    Image, Table, Video)
+					  </xs:documentation>
+					</xs:annotation>
 				      </xs:element>
 				    </xs:sequence>
 				  </xs:complexType>
@@ -2682,6 +2671,14 @@
 					<xs:annotation>
 					  <xs:documentation xml:lang="en">
 					    The mime type of the base64 encoded audio data
+					  </xs:documentation>
+					</xs:annotation>
+				      </xs:element>
+				      <xs:element name="dataFormat" type="DataFormat" minOccurs="1" maxOccurs="1">
+					<xs:annotation>
+					  <xs:documentation xml:lang="en">
+					    The file type of the data described with the annotation. For example (Audio,
+					    Image, Table, Video)
 					  </xs:documentation>
 					</xs:annotation>
 				      </xs:element>
@@ -2747,6 +2744,14 @@
 						<xs:annotation>
 						  <xs:documentation xml:lang="en">
 						    The sha2 hash of the base64 encoded audio data for verification
+						  </xs:documentation>
+						</xs:annotation>
+					      </xs:element>
+					      <xs:element name="dataFormat" type="DataFormat" minOccurs="1" maxOccurs="1">
+						<xs:annotation>
+						  <xs:documentation xml:lang="en">
+						    The file type of the data described with the annotation. For example (Audio,
+						    Image, Table, Video)
 						  </xs:documentation>
 						</xs:annotation>
 					      </xs:element>
@@ -9017,6 +9022,12 @@
 	    </xs:restriction>
 	  </xs:simpleType>
 	</xs:attribute>
+	<xs:attribute name="modifyer" default="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:integer">
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:attribute>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -9129,6 +9140,12 @@
 	<xs:attribute name="uri">
 	  <xs:simpleType>
 	    <xs:restriction base="xs:anyURI">
+	    </xs:restriction>
+	  </xs:simpleType>
+	</xs:attribute>
+	<xs:attribute name="modifyer" default="1">
+	  <xs:simpleType>
+	    <xs:restriction base="xs:integer">
 	    </xs:restriction>
 	  </xs:simpleType>
 	</xs:attribute>
@@ -11802,21 +11819,21 @@
       <xs:enumeration value="River Bank">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    The banks of a river
+	    The bank of a river
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="River Water">
+      <xs:enumeration value="River Water Column">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    The water from a river
+	    The water column of a river
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="River Bed">
 	<xs:annotation>
 	  <xs:documentation xml:lang="en">
-	    The river bed
+	    The bed of a river
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
@@ -13926,6 +13943,16 @@
 	  </xs:documentation>
 	</xs:annotation>
       </xs:enumeration>
+      <xs:enumeration value="Experiments">
+	<xs:annotation>
+	  <xs:documentation xml:lang="en">
+	    A the locatoin is mainly used as experimental site e.g. a
+	    plantation which has semi natural character and is used only for
+	    experimental purposes.
+	  </xs:documentation>
+	</xs:annotation>
+      </xs:enumeration>
+
       <!-- extension -->
       <xs:pattern value="[A-zäöüÄÖÜß0-9 ]*"/>
     </xs:restriction>
@@ -17935,7 +17962,13 @@
 		  </xs:documentation>
 		</xs:annotation>
 	      </xs:enumeration>
-	      <!-- todo: an estimate might be good to have as well -->
+	      <xs:enumeration value="estimated">
+		<xs:annotation>
+		  <xs:documentation xml:lang="en">
+		    A variable that has been estimated
+		  </xs:documentation>
+		</xs:annotation>
+	      </xs:enumeration>
 	    </xs:restriction>
 	  </xs:simpleType>
 	</xs:attribute>
@@ -18350,11 +18383,11 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:simpleType name="DataFormatTypeVocabulary">
+  <xs:simpleType name="DataFormatVocabulary">
     <xs:annotation>
       <xs:documentation xml:lang="en">
-	The data type provides information about the type of search object. It is an
-	extendable list of search object file types (Image, Audio, Table, Video)
+	The data type provides information about the type of object. It is an
+	extendable list of object file types (Image, Audio, Table, Video)
       </xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
@@ -18391,9 +18424,9 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="DataFormatType">
+  <xs:complexType name="DataFormat">
     <xs:simpleContent>
-      <xs:extension base="DataFormatTypeVocabulary">
+      <xs:extension base="DataFormatVocabulary">
 	<xs:attribute name="uri">
 	  <xs:simpleType>
 	    <xs:restriction base="xs:anyURI">
